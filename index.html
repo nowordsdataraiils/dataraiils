@@ -6,12 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>dataraiils.ai – Burn the Spreadsheet</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script defer>
-    function toggleMenu() {
-      const nav = document.getElementById('mobile-menu');
-      nav.classList.toggle('hidden');
-    }
-  </script>
   <meta name="description" content="dataraiils.ai replaces spreadsheets and trafficking templates with AI. Built for creative AORs to automate asset handling, validation, and launch." />
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content="dataraiils.ai – Burn the Spreadsheet" />
@@ -19,7 +13,13 @@
   <meta property="og:image" content="assets/images/dataraiils-logo.png" />
   <meta property="og:url" content="https://dataraiils.ai" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="assets/images/dataraiils-logo.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/images/dataraiils-favicon.ico" type="image/x-icon" />
+  <script defer>
+    function toggleMenu() {
+      const nav = document.getElementById('mobile-menu');
+      nav.classList.toggle('hidden');
+    }
+  </script>
 </head>
 <body class="scroll-smooth bg-white text-gray-900 font-sans">
 
@@ -43,7 +43,14 @@
   </nav>
 </header>
 
-<!-- ✅ ...existing sections above remain unchanged... -->
+<!-- ✅ HERO — The Provocation -->
+<section class="relative bg-gray-100 text-center py-32 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Burn the spreadsheet. Go live in a day.</h1>
+    <p class="text-lg md:text-xl text-gray-700 mb-8">10 days to traffic? That’s 10 days of lost revenue.</p>
+    <a href="#action" class="inline-block bg-purple-600 text-white px-6 py-3 rounded font-semibold hover:bg-purple-700 transition">See it in Action</a>
+  </div>
+</section>
 
 <!-- ✅ FAQ SECTION -->
 <section id="faq" class="max-w-2xl mx-auto px-4 py-20 text-left">
@@ -68,6 +75,15 @@
   </div>
 </section>
 
+<!-- ✅ CTA SECTION -->
+<section id="waitlist" class="bg-purple-50 px-6 py-16 text-center">
+  <div class="max-w-xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ship faster. Sleep better.</h2>
+    <p class="text-lg text-gray-700 mb-6">Join the waitlist to get early access.</p>
+    <a href="#" class="inline-block bg-purple-600 text-white px-6 py-3 rounded font-semibold hover:bg-purple-700 transition">Join the Waitlist</a>
+  </div>
+</section>
+
 <!-- ✅ FOOTER -->
 <footer class="text-center text-sm text-gray-500 py-8 bg-gray-50 border-t border-gray-200">
   © 2025 dataraiils.ai — Privacy-first, AI-powered creative operations
@@ -78,7 +94,7 @@
   window.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#waitlist"]').forEach(btn => {
       btn.addEventListener('click', () => {
-        console.log('Join Waitlist CTA clicked'); // replace with pixel/event tracking
+        console.log('Join Waitlist CTA clicked');
       });
     });
   });
