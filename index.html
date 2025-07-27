@@ -6,166 +6,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>dataraiils.ai – Burn the Spreadsheet</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <meta name="description" content="dataraiils.ai replaces spreadsheets and trafficking templates with AI. Built for creative AORs to automate asset handling, validation, and launch." />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="dataraiils.ai – Burn the Spreadsheet" />
-  <meta property="og:description" content="AI-powered trafficking automation for creative agencies. Upload → Tag → Validate → Launch." />
-  <meta property="og:image" content="assets/images/dataraiils-logo.png" />
-  <meta property="og:url" content="https://dataraiils.ai" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="AI-powered trafficking automation for creative AORs. Upload → Tag → Validate → Launch." />
   <link rel="icon" href="assets/images/dataraiils-favicon.ico" type="image/x-icon" />
   <script defer>
     function toggleMenu() {
-      const nav = document.getElementById('mobile-menu');
-      nav.classList.toggle('hidden');
+      document.getElementById('mobile-menu').classList.toggle('hidden');
     }
   </script>
+  <style>
+    [data-fade] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s ease-out;
+    }
+    [data-fade].visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body class="scroll-smooth bg-white text-gray-900 font-sans">
 
-<!-- ✅ NAVIGATION -->
-<header class="sticky top-0 z-50 bg-white flex flex-col md:flex-row items-start md:items-center justify-between p-6 md:p-8 border-b border-gray-200">
-  <div class="flex justify-between items-center w-full md:w-auto">
-    <img src="assets/images/dataraiils-logo.svg" alt="dataraiils logo" class="h-7 mb-2 md:mb-0" />
-    <button class="md:hidden text-gray-700" onclick="toggleMenu()">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 6.75h15M4.5 12h15M4.5 17.25h15" />
-      </svg>
-    </button>
-  </div>
-  <nav id="mobile-menu" class="hidden md:flex flex-wrap gap-4 md:gap-6 font-medium text-sm mt-4 md:mt-0">
-    <a href="#bottleneck" class="hover:text-purple-700">Old Way</a>
-    <a href="#pain" class="hover:text-purple-700">The Pain</a>
-    <a href="#matrix" class="hover:text-purple-700">Matrix</a>
-    <a href="#action" class="hover:text-purple-700">New Way</a>
-    <a href="#faq" class="hover:text-purple-700">FAQ</a>
-    <a href="#waitlist" class="bg-purple-500 text-white px-4 py-2 rounded font-semibold hover:bg-purple-600 transition">Join Waitlist</a>
-  </nav>
-</header>
-
-<!-- ✅ HERO -->
-<section class="relative bg-gray-100 text-center py-32 px-6">
-  <div class="max-w-4xl mx-auto">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Burn the spreadsheet. Go live in a day.</h1>
-    <p class="text-lg md:text-xl text-gray-700 mb-8">10 days to traffic? That’s 10 days of lost revenue.</p>
-    <a href="#action" class="inline-block bg-purple-600 text-white px-6 py-3 rounded font-semibold hover:bg-purple-700 transition">See it in Action</a>
-  </div>
-</section>
-<!-- ✅ WHY IT MATTERS -->
-<section class="bg-white py-20 px-6 text-center">
-  <div class="max-w-3xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">Why This Matters</h2>
-    <p class="text-lg text-gray-700 leading-relaxed">
-      Every missed tag, broken filename, or trafficking delay costs more than time. It costs launches, learnings, and real revenue.
-    </p>
-    <p class="text-lg text-gray-700 mt-4 leading-relaxed">
-      dataraiils was built to kill the chaos behind the curtain. No more spreadsheet traps. No more creative dying in QA. Just clean handoffs, live campaigns, and ops teams finally breathing.
-    </p>
-  </div>
-</section>
-<!-- ✅ OLD WAY -->
-<section id="bottleneck" class="flex flex-col md:flex-row justify-center items-center gap-8 px-4 py-20">
-  <img src="assets/images/creative_matrix_excel.svg" alt="Messy spreadsheet" class="rounded shadow-md w-full md:w-1/2 max-w-md" loading="lazy" />
-  <div class="md:w-1/2">
-    <h2 class="text-2xl md:text-3xl font-bold mb-4">Spreadsheets are killing your campaigns.</h2>
-    <ul class="text-gray-700 list-disc list-inside space-y-2">
-      <li>6 spreadsheets, 3 rounds of back and forth</li>
-      <li>Human errors everywhere, broken version control</li>
-      <li>Manual QA — your launch is already behind</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ✅ PAIN — Time is Budget -->
-<section id="pain" class="bg-gray-50 py-20 px-6 text-center">
-  <h2 class="text-3xl md:text-4xl font-bold mb-6">Every delay is budget on fire.</h2>
-  <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">Ops teams drown in filenames, DOFUs, and tagging matrices. Every missed impression is lost revenue. And no one knows what’s ready to ship.</p>
-  <img src="assets/images/cost-meter.svg" alt="Cost meter" class="mx-auto h-40" loading="lazy" />
-</section>
-
-<!-- ✅ MATRIX — No Matrix, No Signal -->
-<section id="matrix" class="bg-white flex flex-col md:flex-row justify-center items-center gap-8 px-4 py-20">
-  <img src="assets/images/matrix-mislabel-vs-true.svg" alt="Creative matrix comparison" class="rounded shadow-md w-full md:w-1/2 max-w-md" loading="lazy" />
-  <div class="md:w-1/2">
-    <h2 class="text-2xl md:text-3xl font-bold mb-4">No matrix, no signal.</h2>
-    <ul class="text-gray-700 list-disc list-inside space-y-2">
-      <li>A mislabeled asset isn’t just sloppy — it’s sabotage.</li>
-      <li>Without precise naming, performance data is worthless.</li>
-      <li>You’ll kill great creatives and fund bad ones — all based on the wrong name.</li>
-    </ul>
-    <p class="text-gray-700 mt-4 italic">“Which one got the credit?”</p>
-  </div>
-</section>
-
-<!-- ✅ ACTION — 3-Step Walkthrough -->
-<section id="action" class="bg-white py-20 px-6 text-center">
-  <h2 class="text-3xl md:text-4xl font-bold mb-12">One upload. AI does the rest.</h2>
-  <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-    <div>
-      <img src="assets/images/ai-upload-step-1.svg" alt="Step 1" class="mx-auto mb-4 h-32" loading="lazy" />
-      <h3 class="text-xl font-semibold mb-2">Drop your assets</h3>
-      <p class="text-gray-700">Upload everything into one place — no renaming required.</p>
-    </div>
-    <div>
-      <img src="assets/images/ai-tagging-validation-step-2.svg" alt="Step 2" class="mx-auto mb-4 h-32" loading="lazy" />
-      <h3 class="text-xl font-semibold mb-2">AI tags and validates</h3>
-      <p class="text-gray-700">We apply metadata, check specs, and flag errors in real time.</p>
-    </div>
-    <div>
-      <img src="assets/images/trafficking-package-generator-step-3.png" alt="Step 3" class="mx-auto mb-4 h-32" loading="lazy" />
-      <h3 class="text-xl font-semibold mb-2">Get the package</h3>
-      <p class="text-gray-700">Instant download — previews, naming, and trafficking file included.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ✅ FAQ SECTION -->
-<section id="faq" class="max-w-2xl mx-auto px-4 py-20 text-left">
-  <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Frequently Asked Questions</h2>
-  <div class="space-y-8">
-    <div>
-      <h3 class="text-lg font-semibold">What does dataraiils.ai do?</h3>
-      <p class="text-gray-700">We replace manual ad trafficking processes with AI. Our platform auto-tags assets, validates spec logic, and packages them for launch.</p>
-    </div>
-    <div>
-      <h3 class="text-lg font-semibold">Who is dataraiils for?</h3>
-      <p class="text-gray-700">We’re built for creative AORs, production leads, and operators who are still stuck managing Excel sheets and naming conventions.</p>
-    </div>
-    <div>
-      <h3 class="text-lg font-semibold">Do you store our data?</h3>
-      <p class="text-gray-700">No. dataraiils is privacy-first. We don’t retain your creative files or metadata once processing is complete.</p>
-    </div>
-    <div>
-      <h3 class="text-lg font-semibold">What trafficking formats do you support?</h3>
-      <p class="text-gray-700">We generate output files for CM360, DV360, Meta, YouTube, and custom sheets depending on your workflow needs.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ✅ CTA SECTION -->
-<section id="waitlist" class="bg-purple-50 px-6 py-16 text-center">
-  <div class="max-w-xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ship faster. Sleep better.</h2>
-    <p class="text-lg text-gray-700 mb-6">Join the waitlist to get early access.</p>
-    <a href="#" class="inline-block bg-purple-600 text-white px-6 py-3 rounded font-semibold hover:bg-purple-700 transition">Join the Waitlist</a>
-  </div>
-</section>
-
-<!-- ✅ FOOTER -->
-<footer class="text-center text-sm text-gray-500 py-8 bg-gray-50 border-t border-gray-200">
-  © 2025 dataraiils.ai — Privacy-first, AI-powered creative operations
-</footer>
-
-<!-- ✅ METRICS / TESTING HOOKS -->
 <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('a[href^="#waitlist"]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        console.log('Join Waitlist CTA clicked');
-      });
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('[data-fade]').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      const topShown = rect.top < window.innerHeight - 100;
+      if (topShown) el.classList.add('visible');
     });
   });
 </script>
 
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+  <img src="assets/images/dataraiils-logo.svg" alt="dataraiils logo" class="h-7" />
+  <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+    <a href="#bottleneck" class="hover:text-purple-700">Old Way</a>
+    <a href="#action" class="hover:text-purple-700">New Way</a>
+    <a href="#screenshot" class="hover:text-purple-700">Product</a>
+    <a href="#faq" class="hover:text-purple-700">FAQ</a>
+    <a href="#waitlist" class="bg-purple-600 text-white px-4 py-2 rounded font-semibold hover:bg-purple-700 transition">Join Waitlist</a>
+  </nav>
+  <button class="md:hidden" onclick="toggleMenu()">☰</button>
+</header>
+
+<nav id="mobile-menu" class="hidden md:hidden px-6 py-4 space-y-2 text-sm">
+  <a href="#bottleneck" class="block">Old Way</a>
+  <a href="#action" class="block">New Way</a>
+  <a href="#screenshot" class="block">Product</a>
+  <a href="#faq" class="block">FAQ</a>
+  <a href="#waitlist" class="block bg-purple-600 text-white px-4 py-2 rounded font-semibold">Join Waitlist</a>
+</nav>
+
+<section class="bg-gray-50 py-32 px-6 text-center" data-fade>
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-6xl font-bold leading-tight mb-4">Burn the spreadsheet. Launch in a day.</h1>
+    <p class="text-lg text-gray-600 mb-6">10 days to traffic? That’s 10 days of lost revenue.</p>
+    <a href="#action" class="bg-purple-600 text-white text-lg px-6 py-3 rounded hover:bg-purple-700 transition font-semibold">See it in Action</a>
+  </div>
+</section>
+
+<section class="bg-white py-32 px-6 text-center" data-fade>
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-4xl font-bold mb-6">Why This Matters</h2>
+    <p class="text-gray-700 text-lg leading-relaxed">Every missed tag or trafficking delay costs real revenue. dataraiils kills the chaos behind the curtain.</p>
+    <p class="text-gray-700 mt-4 text-lg leading-relaxed">No more spreadsheet traps. No more launches dying in QA. Just clean handoffs and live campaigns.</p>
+  </div>
+</section>
+
+<section id="pain" class="bg-gray-100 py-32 px-6 text-center" data-fade>
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold mb-6">Every delay is budget on fire.</h2>
+    <p class="text-lg text-gray-700 leading-relaxed mb-8">Ops teams drown in filenames, DOFUs, and tagging matrices. Every missed impression is lost revenue. And no one knows what’s ready to ship.</p>
+    <img src="assets/images/cost-meter.svg" alt="Cost meter visual" class="h-40 mx-auto" loading="lazy" />
+  </div>
+</section>
+
+<section id="bottleneck" class="bg-purple-50 py-32 px-6" data-fade>
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <img src="assets/images/creative_matrix_excel.svg" class="w-full md:w-1/2 rounded-xl shadow-md" alt="Old spreadsheet" />
+    <div class="md:w-1/2">
+      <h2 class="text-3xl font-bold mb-4">Spreadsheets are killing your campaigns.</h2>
+      <ul class="text-gray-700 list-disc list-inside space-y-2 text-lg">
+        <li>6 spreadsheets, 3 rounds of back and forth</li>
+        <li>Broken version control, manual QA</li>
+        <li>Launches delayed, creatives misfired</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="matrix" class="bg-white py-32 px-6" data-fade>
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <img src="assets/images/matrix-mislabel-vs-true.svg" class="w-full md:w-1/2 rounded-xl shadow-md" alt="Matrix comparison" loading="lazy" />
+    <div class="md:w-1/2">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">No matrix, no signal.</h2>
+      <ul class="text-gray-700 list-disc list-inside text-lg space-y-2">
+        <li>A mislabeled asset isn’t just sloppy — it’s sabotage.</li>
+        <li>Without precise naming, performance data is worthless.</li>
+        <li>You’ll kill great creatives and fund bad ones — all based on the wrong name.</li>
+      </ul>
+      <p class="italic text-gray-600 mt-4">“Which one got the credit?”</p>
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
+
