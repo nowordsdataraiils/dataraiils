@@ -19,8 +19,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <meta name="description" content="Our privacy promise: no file storage, no user tracking. Just secure automation and fast campaign handoffs." />
   <link rel="icon" href="assets/images/dataraiils-favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+    }
+    summary {
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900 font-sans">
+<body class="bg-white text-gray-900">
   <main class="max-w-3xl mx-auto px-6 py-20">
     <h1 class="text-4xl font-bold mb-6">Privacy Policy</h1>
     <p class="text-gray-700 mb-2">Effective Date: July 27, 2025</p>
@@ -42,6 +50,17 @@
 
       <h2 class="text-2xl font-semibold">No third-party sharing</h2>
       <p>Your information stays yours. We don’t sell, rent, or share any user data with third parties.</p>
+
+      <h2 class="text-2xl font-semibold">FAQs</h2>
+      <details class="bg-gray-50 border border-gray-200 rounded p-4">
+        <summary class="font-medium text-purple-700">Is this secure?</summary>
+        <p class="mt-2 text-gray-600">Yes. We use encrypted upload paths, short-lived sessions, and wipe all uploaded data within minutes of processing. Nothing is stored or archived.</p>
+      </details>
+
+      <details class="bg-gray-50 border border-gray-200 rounded p-4">
+        <summary class="font-medium text-purple-700">How does AI know how to tag my assets?</summary>
+        <p class="mt-2 text-gray-600">We’ve trained the system on thousands of pharma trafficking sheets and naming standards — then added business logic to match BRDs, channels, and indication metadata.</p>
+      </details>
 
       <h2 class="text-2xl font-semibold">Contact us</h2>
       <p>Have questions? Email <a href="mailto:hello@dataraiils.ai" class="text-purple-600 underline">hello@dataraiils.ai</a>.</p>
