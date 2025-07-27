@@ -57,6 +57,8 @@
   <a href="#waitlist" class="block bg-purple-600 text-white px-4 py-2 rounded font-semibold">Join Waitlist</a>
 </nav>
 
+<a href="#waitlist" class="fixed bottom-4 right-4 z-50 bg-purple-600 text-white px-4 py-3 rounded-full shadow-lg hover:bg-purple-700 transition hidden md:block">Join Waitlist</a>
+
 <section class="bg-gray-50 py-32 px-6 text-center" data-fade>
   <div class="max-w-4xl mx-auto">
     <h1 class="text-6xl font-bold leading-tight mb-4">Burn the spreadsheet. Launch in a day.</h1>
@@ -83,7 +85,7 @@
 
 <section id="bottleneck" class="bg-purple-50 py-32 px-6" data-fade>
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <img src="assets/images/creative_matrix_excel.svg" class="w-full md:w-1/2 rounded-xl shadow-md" alt="Old spreadsheet" />
+    <img src="assets/images/creative_matrix_excel.svg" class="w-full md:w-1/2 rounded-xl shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-200" alt="Old spreadsheet" />
     <div class="md:w-1/2">
       <h2 class="text-3xl font-bold mb-4">Spreadsheets are killing your campaigns.</h2>
       <ul class="text-gray-700 list-disc list-inside space-y-2 text-lg">
@@ -97,7 +99,7 @@
 
 <section id="matrix" class="bg-white py-32 px-6" data-fade>
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-    <img src="assets/images/matrix-mislabel-vs-true.svg" class="w-full md:w-1/2 rounded-xl shadow-md" alt="Matrix comparison" loading="lazy" />
+    <img src="assets/images/matrix-mislabel-vs-true.svg" class="w-full md:w-1/2 rounded-xl shadow-md hover:scale-105 hover:shadow-xl transition-transform duration-200" alt="Matrix comparison" loading="lazy" />
     <div class="md:w-1/2">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">No matrix, no signal.</h2>
       <ul class="text-gray-700 list-disc list-inside text-lg space-y-2">
@@ -110,6 +112,60 @@
   </div>
 </section>
 
-</body>
-</html>
+<section id="action" class="bg-white py-32 px-6 text-center" data-fade>
+  <h2 class="text-4xl font-bold mb-12">One upload. AI does the rest.</h2>
+  <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+    <div style="transition-delay: 0.1s" data-fade class="bg-gray-50 rounded-xl p-8 shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-200">
+      <img src="assets/images/ai-upload-step-1.svg" class="h-24 mx-auto mb-4" />
+      <h3 class="text-xl font-semibold mb-2">Drop your assets</h3>
+      <p class="text-gray-600">Upload everything — no renaming required.</p>
+    </div>
+    <div style="transition-delay: 0.3s" data-fade class="bg-gray-50 rounded-xl p-8 shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-200">
+      <img src="assets/images/ai-tagging-validation-step-2.svg" class="h-24 mx-auto mb-4" />
+      <h3 class="text-xl font-semibold mb-2">AI tags + validates</h3>
+      <p class="text-gray-600">We check specs, apply metadata, flag errors.</p>
+    </div>
+    <div style="transition-delay: 0.5s" data-fade class="bg-gray-50 rounded-xl p-8 shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-200">
+      <img src="assets/images/trafficking-package-generator-step-3.png" class="h-24 mx-auto mb-4" />
+      <h3 class="text-xl font-semibold mb-2">Instant package</h3>
+      <p class="text-gray-600">Download previews, file names, and trafficking docs.</p>
+    </div>
+  </div>
+</section>
 
+<!-- ✅ PRODUCT SCREENSHOT -->
+<section id="screenshot" class="bg-gray-100 py-32 px-6 text-center" data-fade>
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-4xl font-bold mb-6">See the Interface in Action</h2>
+    <p class="text-gray-600 mb-10">This is what clean, AI-powered trafficking looks like.</p>
+    <img src="assets/images/platform-ui-screenshot.png" alt="Platform screenshot" class="rounded-xl shadow-lg mx-auto" loading="lazy" />
+  </div>
+</section>
+
+<!-- ✅ FAQ -->
+<section id="faq" class="bg-white py-32 px-6" data-fade>
+  <div class="max-w-2xl mx-auto space-y-8">
+    <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+    <div>
+      <h3 class="text-lg font-semibold">What does dataraiils.ai do?</h3>
+      <p class="text-gray-700">We replace manual ad trafficking with AI. Our platform auto-tags assets, validates spec logic, and packages them for launch.</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold">Who is dataraiils for?</h3>
+      <p class="text-gray-700">We’re built for creative AORs, production leads, and operators who are still stuck managing Excel sheets and naming conventions.</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold">Do you store our data?</h3>
+      <p class="text-gray-700">No. dataraiils is privacy-first. We don’t retain your creative files or metadata once processing is complete.</p>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold">What trafficking formats do you support?</h3>
+      <p class="text-gray-700">We generate output files for CM360, DV360, Meta, YouTube, and custom sheets depending on your workflow needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ FOOTER -->
+<footer class="bg-gray-50 border-t border-gray-200 text-center text-sm text-gray-500 py-8">
+  © 2025 dataraiils.ai — Privacy-first, AI-powered creative ops | <a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Contact</a>
+</footer>
