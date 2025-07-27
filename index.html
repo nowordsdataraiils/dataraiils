@@ -18,13 +18,12 @@
   <meta name="twitter:image" content="assets/images/dataraiils-app-ui-preview.webp" />
   <link rel="icon" href="assets/images/favicon-dataraiils.webp" type="image/webp" />
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-900 font-sans">
+
   <header class="w-full border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
       <img src="assets/images/dataraiils-logo.webp" alt="dataraiils logo" class="h-8" loading="lazy" />
@@ -50,6 +49,19 @@
       </div>
     </section>
   </main>
+
+  <section class="mt-24 grid md:grid-cols-2 gap-16 items-center px-6 max-w-7xl mx-auto">
+    <img src="assets/images/manual-ops-error-excel-screenshot.webp" alt="Manual ops UI preview" class="rounded shadow" loading="lazy" />
+    <div class="text-left">
+      <h2 class="text-3xl font-bold mb-4">Manual ops? Not anymore.</h2>
+      <p class="text-gray-700 mb-4">dataraiils automates trafficking from start to finish. No more versioning chaos, missed specs, or tedious QA. Just clean, launch-ready packages.</p>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Auto-tag assets using AI</li>
+        <li>Validate specs + logic before launch</li>
+        <li>Package everything with one click</li>
+      </ul>
+    </div>
+  </section>
 
   <section id="demo" class="px-6 py-24 bg-gray-50">
     <h2 class="text-3xl font-bold mb-12 text-center">How it works</h2>
@@ -84,25 +96,23 @@
     </div>
   </section>
 
-  <section class="px-6 py-24 bg-white">
-    <h2 class="text-2xl font-bold mb-8 text-center">FAQ</h2>
-    <div class="max-w-2xl mx-auto">
-      <details class="mb-4 bg-gray-50 p-4 rounded border border-gray-200">
-        <summary class="font-medium cursor-pointer text-purple-600">Do you store creative files?</summary>
-        <p class="text-gray-700 mt-2">No. Files are temporarily processed and deleted. Nothing is saved or shared.</p>
-      </details>
-      <details class="mb-4 bg-gray-50 p-4 rounded border border-gray-200">
-        <summary class="font-medium cursor-pointer text-purple-600">Does this replace our trafficking team?</summary>
-        <p class="text-gray-700 mt-2">No — it supports them. dataraiils speeds up workflow and reduces risk. Your team stays in control.</p>
-      </details>
-      <details class="bg-gray-50 p-4 rounded border border-gray-200">
-        <summary class="font-medium cursor-pointer text-purple-600">What file types are supported?</summary>
-        <p class="text-gray-700 mt-2">HTML5, JPG, PNG, MP4, and PDF — with more on the roadmap.</p>
-      </details>
-    </div>
+  <section class="mt-24 bg-gray-100 p-10 rounded-xl max-w-5xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4 text-center">FAQ</h2>
+    <details class="mb-4">
+      <summary class="font-medium cursor-pointer text-purple-600">Do you store creative files?</summary>
+      <p class="text-gray-700 mt-2">No. Files are temporarily processed and deleted. Nothing is saved or shared.</p>
+    </details>
+    <details class="mb-4">
+      <summary class="font-medium cursor-pointer text-purple-600">Does this replace our trafficking team?</summary>
+      <p class="text-gray-700 mt-2">No — it supports them. dataraiils speeds up workflow and reduces risk. Your team stays in control.</p>
+    </details>
+    <details>
+      <summary class="font-medium cursor-pointer text-purple-600">What file types are supported?</summary>
+      <p class="text-gray-700 mt-2">HTML5, JPG, PNG, MP4, and PDF — with more on the roadmap.</p>
+    </details>
   </section>
 
-  <section id="waitlist" class="px-6 py-24 text-center bg-gray-50">
+  <section id="waitlist" class="mt-24 text-center px-6">
     <h2 class="text-3xl font-bold mb-4">Want early access?</h2>
     <p class="text-gray-600 mb-6">Join our waitlist to be the first to try dataraiils.</p>
     <a href="https://forms.gle/YOUR_FORM_ID" target="_blank" rel="noopener" class="bg-purple-600 text-white px-6 py-3 rounded-full font-medium hover:bg-purple-700">
@@ -110,14 +120,15 @@
     </a>
   </section>
 
-  <footer class="bg-white border-t border-gray-200 text-center text-sm text-gray-500 py-8 px-6">
+  <footer class="bg-gray-50 border-t border-gray-200 text-center text-sm text-gray-500 py-8 mt-24">
     © 2025 dataraiils.ai — 
     <a href="privacy.html" class="hover:text-purple-600">Privacy</a> | 
     <a href="terms.html" class="hover:text-purple-600">Terms</a> | 
     <a href="mailto:hello@dataraiils.ai" class="hover:text-purple-600">Contact</a>
     <p class="mt-4 text-xs text-gray-400">
-      Built for pharma marketing, ad ops, and creative operations automation. dataraiils is the execution layer your trafficking stack forgot.
+      Built for pharma marketing, ad ops, and creative operations automation.
     </p>
   </footer>
+
 </body>
 </html>
