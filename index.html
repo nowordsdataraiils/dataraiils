@@ -194,6 +194,14 @@
 
 <script>
   window.addEventListener('scroll', () => {
+    const bg = document.querySelector('.hero img');
+    if (!bg) return;
+    const offset = window.scrollY * 0.15;
+    bg.style.transform = `translateY(${offset}px)`;
+  });
+</script>
+
+  window.addEventListener('scroll', () => {
     const bg = document.querySelector('.parallax-bg');
     if (!bg) return;
     const offset = window.scrollY * 0.15;
