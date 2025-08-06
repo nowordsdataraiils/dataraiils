@@ -9,7 +9,101 @@
   <meta name="keywords" content="creative ops, ad ops automation, trafficking sheets, media launch, pharma advertising, AI metadata, campaign packaging, ad trafficking tool">
   <link rel="icon" type="image/png" href="assets/images/favicon-dataraiils.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #1B1B1F;
+      background-color: #FFFFFF;
+      line-height: 1.6;
+    }
+    h1 { font-size: 48px; font-weight: 700; line-height: 1.2; margin-bottom: 24px; }
+    h2 { font-size: 32px; font-weight: 600; margin-bottom: 16px; }
+    p, li { font-size: 16px; font-weight: 400; line-height: 1.6; color: #1B1B1F; }
+    label, small, .label { font-size: 14px; font-weight: 500; color: #6C6F7F; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+    .grid { display: grid; gap: 24px; }
+    .button-primary {
+      background-color: #9605DF;
+      color: #FFFFFF;
+      border: none;
+      padding: 12px 24px;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+    .button-primary:hover { background-color: #7E04B9; }
+    .button-secondary {
+      background: none;
+      color: #9605DF;
+      font-weight: 500;
+      font-size: 16px;
+      text-decoration: underline;
+      border: none;
+      cursor: pointer;
+    }
+    a {
+      color: #9605DF;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover { text-decoration: underline; }
+    img, svg { max-width: 100%; height: auto; }
+    .text-center { text-align: center; }
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background-color: #fff;
+      border-bottom: 1px solid #eee;
+    }
+    .nav-link {
+      margin-left: 20px;
+      color: #1B1B1F;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      padding: 80px 24px;
+    }
+    footer {
+      background-color: #FAFAFA;
+      padding: 48px 24px;
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
   <header class="nav-bar">
@@ -20,22 +114,23 @@
       <a href="#product" class="nav-link">Product</a>
       <a href="#how-it-works" class="nav-link">How It Works</a>
       <a href="#why-it-matters" class="nav-link">Why It Matters</a>
-      <a href="#about" class="nav-link">About</a>
       <a href="#demo" class="button-primary">Book a Demo</a>
     </nav>
   </header>
 
- <section class="hero" style="position: relative; text-align: center;">
-    <img src="assets/images/hero-background-dunes.png" alt="Hero background with dunes" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.1; z-index: 0;">
-    <div style="position: relative; z-index: 1;">
+  <section class="hero">
+    <img 
+      src="assets/images/dataraiils-ai-trafficking-automation-hero-sailboat-calm-clarity.png"
+      alt="Two-masted sailboat on still water framed by blue mountains, representing clarity and flow for Dataraiils’ creative trafficking automation."
+      class="hero-bg"
+    />
+    <div class="hero-content">
       <h1>Trafficking, solved.</h1>
       <p>Auto-tag. Validate. Launch. In minutes.</p>
-      <p class="trust-tagline">Trusted by top pharma ad ops teams.</p>
       <a href="#how-it-works" class="button-secondary">See How It Works</a>
     </div>
-</section>
-
-  <section class="problem" id="why-it-matters">
+  </section>
+  <section class="section" id="why-it-matters">
     <h2>Trafficking isn’t a workflow problem. It’s a truth problem.</h2>
     <ul>
       <li>Specs are missed</li>
@@ -46,7 +141,7 @@
     <blockquote>Without Dataraiils, you don’t just risk delay — you risk losing the signal.</blockquote>
   </section>
 
-  <section class="features" id="product">
+  <section class="section" id="product">
     <h2>A broken handoff. A chaotic process. A forgotten system layer.</h2>
     <ul>
       <li>Upload raw assets</li>
@@ -57,19 +152,18 @@
     </ul>
   </section>
 
-  <section class="operator-pain">
+  <section class="section">
     <h2>We know the SLA is 10–15 days. We also know that’s insane.</h2>
     <p>This wasn’t built in a lab. It was built in the middle of live campaigns.</p>
     <ul>
       <li>Delay is operational theater</li>
       <li>Manual rework posing as process</li>
-      <li>Delayed launch = delayed revenue</li>
       <li>Unstructured assets = unmeasurable campaigns</li>
     </ul>
     <blockquote>“We were launching multimillion-dollar campaigns by stitching filenames in Slack. Dataraiils changed everything.”</blockquote>
   </section>
 
-  <section class="how-it-works" id="how-it-works">
+  <section class="section" id="how-it-works">
     <h2>Three steps. One clean launch.</h2>
     <ol>
       <li>Drop assets</li>
@@ -78,150 +172,44 @@
     </ol>
   </section>
 
-  <section class="proof">
+  <section class="section">
     <h2>Trusted by the people who can’t afford to get it wrong.</h2>
     <blockquote>“This saved us 15 hours per campaign. And 15 headaches.” – Senior Ad Ops Lead, Top 10 Pharma Agency</blockquote>
   </section>
 
-  <section class="faq">
-  <h2>FAQ</h2>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFAQ(this)">What is Dataraiils used for?<span class="faq-icon">+</span></button>
-    <div class="faq-answer">Dataraiils is a creative trafficking automation tool. It tags, validates, and packages final creative assets for campaign launch—saving time and reducing human error.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFAQ(this)">How does Dataraiils improve ad operations?<span class="faq-icon">+</span></button>
-    <div class="faq-answer">It eliminates manual file naming, metadata tagging, trafficking sheet creation, and QA cycles. Ad ops teams save hours per campaign and reduce rework.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFAQ(this)">Does Dataraiils replace my ad ops team?<span class="faq-icon">+</span></button>
-    <div class="faq-answer">Not at all. Dataraiils amplifies your team. It handles the repetitive work—tagging, validating, trafficking—so they can focus on execution. QA happens in Dataraiils, which means fewer errors, less rework, and faster launches.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFAQ(this)">Can we customize fields and naming rules?<span class="faq-icon">+</span></button>
-    <div class="faq-answer">Yes. During onboarding, we sync with your BRD to match agency-specific naming conventions, taxonomies, and metadata structures.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFAQ(this)">How long does onboarding take?<span class="faq-icon">+</span></button>
-    <div class="faq-answer">If you’ve got a BRD, we’re ready. Setup moves at your pace—with full support and zero code.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFAQ(this)">Can I try Dataraiils before committing?<span class="faq-icon">+</span></button>
-    <div class="faq-answer">Absolutely. Book a demo and explore how it fits your workflow.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFAQ(this)">Does Dataraiils support multiple languages?<span class="faq-icon">+</span></button>
-    <div class="faq-answer">Yes. Our AI can validate and tag assets in any language—supporting global campaigns from day one.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFAQ(this)">Can Dataraiils pre-build trafficking templates for each media platform?<span class="faq-icon">+</span></button>
-    <div class="faq-answer">Yes. We can map specs and metadata to match channel-specific requirements—before the creative is even made.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFAQ(this)">Can you export to our media systems or data lake?<span class="faq-icon">+</span></button>
-    <div class="faq-answer">Yes. Dataraiils can deliver directly to tools like Adobe, Snowflake, DC, Google, or Meta—making reporting and compliance seamless.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFAQ(this)">Does Dataraiils store our files?<span class="faq-icon">+</span></button>
-    <div class="faq-answer">No. Files are processed securely and deleted after export. But every job makes us smarter—helping flag gaps and update your BRD in real-time.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question" onclick="toggleFAQ(this)">How does Dataraiils help our global agency network?<span class="faq-icon">+</span></button>
-    <div class="faq-answer">It standardizes trafficking across teams, markets, and partners—ensuring metadata consistency for scalable reporting, compliance, and measurement.</div>
-  </div>
-</section>
+  <section class="section text-center" id="waitlist">
+    <h2>Want early access?</h2>
+    <p>Join our waitlist to be the first to try Dataraiils.</p>
+    <a href="https://forms.gle/YOUR_FORM_ID" target="_blank" rel="noopener" class="button-primary">
+      Join Waitlist
+    </a>
+  </section>
 
-  <section class="final-cta">
+  <section class="section">
     <h2>You’ve fixed media. You’ve nailed measurement. But you still launch in chaos.</h2>
     <p>The spreadsheet’s still winning. Dataraiils ends that.</p>
     <div>
       <a href="#" class="button-primary">Book a Demo</a>
-      <a href="#" class="button-outline">Talk to Product</a>
       <a href="#" class="button-secondary">Start Using Dataraiils</a>
     </div>
   </section>
-
-  <footer class="footer">
-    <div>
-      <a href="#">About</a>
-      <a href="#">Product</a>
-      <a href="#">Use Cases</a>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-    </div>
-    <div>
-      <a href="#">LinkedIn</a>
-    </div>
+  <footer>
+    <p>
+      © 2025 dataraiils.ai — 
+      <a href="privacy.html">Privacy</a> | 
+      <a href="terms.html">Terms</a> | 
+      <a href="mailto:hello@dataraiils.ai">Contact</a>
+    </p>
   </footer>
 
-<script>
-function toggleFAQ(button) {
-  const answer = button.nextElementSibling;
-  const icon = button.querySelector('.faq-icon');
-  const isOpen = answer.style.display === "block";
-  answer.style.display = isOpen ? "none" : "block";
-  icon.textContent = isOpen ? "+" : "−";
-}
-</script>
-
-<style>
-.faq-item {
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 1rem;
-}
-.faq-question {
-  font-size: 1rem;
-  font-weight: 500;
-  background: none;
-  border: none;
-  padding: 0;
-  text-align: left;
-  cursor: pointer;
-  width: 100%;
-  color: #2d2d2d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.faq-question:hover {
-  color: #6200ee; /* brand purple */
-}
-.faq-icon {
-  font-size: 1.25rem;
-  margin-left: 1rem;
-  color: #6200ee;
-  transition: transform 0.2s ease;
-}
-.faq-answer {
-  margin-top: 0.5rem;
-  display: none;
-  font-size: 0.95rem;
-  color: #555;
-}
-</style>
-</body>
-</html>
-
-
-<section class="mt-32 max-w-3xl mx-auto text-center px-6">
-      <blockquote class="bg-gray-100 border-l-4 border-purple-600 text-gray-800 italic text-lg px-6 py-8 rounded">
-        “You took the most broken, thankless part of advertising — trafficking — and made it beautiful, intuitive, and invisible. That’s not software. That’s art.”
-      </blockquote>
-    </section>
-
-
-    <section id="waitlist" class="mt-32 text-center">
-      <h2 class="text-3xl font-bold mb-4 text-purple-600">Want early access?</h2>
-      <p class="text-gray-600 mb-6">Join our waitlist to be the first to try dataraiils.</p>
-      <a href="https://forms.gle/YOUR_FORM_ID" target="_blank" rel="noopener" class="bg-purple-600 text-white px-6 py-3 rounded-full font-medium hover:bg-purple-700 transition-transform transform hover:scale-105">
-        Join waitlist
-      </a>
-    </section>
-  </main>
-
-  <footer class="bg-gray-50 border-t border-gray-200 text-center text-sm text-gray-500 py-10 mt-32">
-    © 2025 dataraiils.ai — <a href="privacy.html" class="hover:text-purple-600">Privacy</a> | <a href="terms.html" class="hover:text-purple-600">Terms</a> | <a href="mailto:hello@dataraiils.ai" class="hover:text-purple-600">Contact</a>
-  </footer>
+  <script>
+    function toggleFAQ(button) {
+      const answer = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+      const isOpen = answer.style.display === "block";
+      answer.style.display = isOpen ? "none" : "block";
+      icon.textContent = isOpen ? "+" : "−";
+    }
+  </script>
 </body>
 </html>
