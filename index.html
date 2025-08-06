@@ -119,27 +119,77 @@
   </header>
 
   <section class="hero">
-    <img 
-      src="assets/images/dataraiils-ai-trafficking-automation-hero-sailboat-calm-clarity.png"
-      alt="Two-masted sailboat on still water framed by blue mountains, representing clarity and flow for Dataraiils’ creative trafficking automation."
-      class="hero-bg"
-    />
-    <div class="hero-content">
-      <h1>Trafficking, solved.</h1>
-      <p>Auto-tag. Validate. Launch. In minutes.</p>
-      <a href="#how-it-works" class="button-secondary">See How It Works</a>
-    </div>
-  </section>
-  <section class="section" id="why-it-matters">
-    <h2>Trafficking isn’t a workflow problem. It’s a truth problem.</h2>
-    <ul>
-      <li>Specs are missed</li>
-      <li>Tags break attribution</li>
-      <li>Rework kills velocity</li>
-      <li>Delayed launch = delayed revenue</li>
-    </ul>
-    <blockquote>Without Dataraiils, you don’t just risk delay — you risk losing the signal.</blockquote>
-  </section>
+<section class="hero" style="position: relative; min-height: 100vh; overflow: hidden;">
+  <!-- Full-Bleed Hero Background -->
+  <img 
+    src="assets/images/dataraiils-ai-trafficking-automation-hero-sailboat-calm-clarity.png" 
+    alt="Hero background showing sailboat left, open sky right" 
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left center;
+      opacity: 1;
+      z-index: 0;
+      filter: brightness(0.95);
+    "
+    loading="lazy"
+  />
+
+  <!-- Overlay Gradient -->
+  <div style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(27,27,31,0.1), rgba(27,27,31,0));
+    z-index: 1;
+  "></div>
+
+  <!-- Text Content -->
+  <div style="
+    position: relative;
+    z-index: 2;
+    padding-left: 5vw;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: #1B1B1F;
+  ">
+    <h1 style="font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 700; margin-bottom: 24px;">
+      Trafficking, solved.
+    </h1>
+    <p style="font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 400; margin-bottom: 32px;">
+      Auto-tag. Validate. Launch. In minutes.
+    </p>
+    <a 
+      href="#how-it-works" 
+      class="cta-button" 
+      style="
+        display: inline-block;
+        background-color: #9605DF;
+        color: #FFFFFF;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 12px 28px;
+        border-radius: 999px;
+        text-decoration: none;
+        transition: background-color 0.2s ease-in-out;
+      "
+      onmouseover="this.style.backgroundColor='#7E04B9'"
+      onmouseout="this.style.backgroundColor='#9605DF'"
+    >
+      See It in Action
+    </a>
+  </div>
+</section>
 
   <section class="section" id="product">
     <h2>A broken handoff. A chaotic process. A forgotten system layer.</h2>
