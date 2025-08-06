@@ -119,19 +119,21 @@
   </header>
 
 <section class="hero" style="position: relative; min-height: 100vh; overflow: hidden;">
-  <!-- Full-Bleed Hero Background -->
+  <!-- Full-Bleed Hero Background with Parallax -->
   <img 
     src="assets/images/dataraiils-ai-trafficking-automation-hero-sailboat-calm-clarity.png" 
     alt="Hero background showing sailboat left, open sky right" 
+    class="parallax-bg"
     style="
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 120%;
       object-fit: cover;
       object-position: left center;
-      opacity: 1;
+      transform: translateZ(0);
+      will-change: transform;
       z-index: 0;
       filter: brightness(0.95);
     "
@@ -189,6 +191,15 @@
     </a>
   </div>
 </section>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const bg = document.querySelector('.parallax-bg');
+    if (!bg) return;
+    const offset = window.scrollY * 0.15;
+    bg.style.transform = `translateY(${offset}px)`;
+  });
+</script>
 
   <section class="section" id="product">
     <h2>A broken handoff. A chaotic process. A forgotten system layer.</h2>
