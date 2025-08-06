@@ -25,12 +25,99 @@
   </nav>
 </header>
 
-<section class="hero" style="position: relative; min-height: 100vh;">
-  <img src="assets/images/dataraiils-ai-trafficking-automation-hero-sailboat-calm-clarity.png" class="hero-bg" alt="Hero Background" />
-  <div class="hero-content">
-    <h1>Your campaign isn't live until your data is.</h1>
-    <p>Dataraiils automates the final mile of creative ops—so your launch is real.</p>
-    <a href="#how-it-works" class="button-primary">Watch How 15 Hours Disappear</a>
+<section class="hero" style="position: relative; min-height: 100vh; overflow: hidden;">
+  <!-- Background Image -->
+  <img 
+    src="assets/images/dataraiils-ai-trafficking-automation-hero-sailboat-calm-clarity.png" 
+    alt="Hero background showing sailboat left, open sky right" 
+    style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left center;
+      z-index: 0;
+      filter: brightness(0.95);
+    "
+    loading="lazy"
+  />
+
+  <!-- Vignette -->
+  <div style="
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: radial-gradient(circle at 75% center, rgba(27,27,31,0.08), rgba(27,27,31,0));
+    z-index: 1;
+    pointer-events: none;
+  "></div>
+
+  <!-- CTA Glow Zone -->
+  <div style="
+    position: absolute;
+    bottom: 15%;
+    left: 5vw;
+    width: 500px;
+    height: 120px;
+    background-color: rgba(243, 91, 37, 0.08); /* #F35B25 tint */
+    filter: blur(40px);
+    z-index: 1;
+    border-radius: 999px;
+    pointer-events: none;
+  "></div>
+
+  <!-- Text Content -->
+  <div style="
+    position: relative;
+    z-index: 2;
+    padding-left: 5vw;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  ">
+    <h1 style="
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    ">
+      Your campaign isn't live until your data is.
+    </h1>
+    <p style="
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 28px;
+    ">
+      Dataraiils automates the final mile of creative ops—so your launch is real.
+    </p>
+    <a 
+      href="#how-it-works" 
+      class="button-primary" 
+      style="
+        display: inline-block;
+        padding: 12px 28px;
+        border-radius: 999px;
+        background-color: #9605DF;
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        transition: background-color 0.2s ease-in-out;
+        max-width: fit-content;
+      "
+      onmouseover="this.style.backgroundColor='#7E04B9'"
+      onmouseout="this.style.backgroundColor='#9605DF'"
+    >
+      Watch How 15 Hours Disappear
+    </a>
   </div>
 </section>
 
