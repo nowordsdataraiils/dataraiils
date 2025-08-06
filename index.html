@@ -4,98 +4,206 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <base href="/dataraiils/" />
-  <title>dataraiils.ai – Burn the Spreadsheet</title>
-  <meta name="description" content="dataraiils.ai replaces spreadsheets and trafficking templates with AI. Built for creative AORs to automate asset handling, validation, and launch." />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="dataraiils.ai – Burn the Spreadsheet" />
-  <meta property="og:description" content="Automate trafficking. Validate assets. Go live instantly. Say goodbye to naming conventions, manual ops, and broken links." />
-  <meta property="og:image" content="assets/images/dataraiils-og.jpg" />
-  <meta property="og:url" content="https://dataraiils.ai" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="dataraiils.ai – Burn the Spreadsheet" />
-  <meta name="twitter:description" content="Automate trafficking. Validate assets. Go live instantly. Say goodbye to naming conventions, manual ops, and broken links." />
-  <meta name="twitter:image" content="assets/images/dataraiils-og.jpg" />
-  <link rel="icon" href="assets/images/favicon-dataraiils.png" type="image/png" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Dataraiils – AI-Powered Creative Trafficking Automation</title>
+  <meta name="description" content="Dataraiils automates the final mile of creative operations—auto-tagging, validating, and packaging ad assets for flawless campaign launches.">
+  <meta name="keywords" content="creative ops, ad ops automation, trafficking sheets, media launch, pharma advertising, AI metadata, campaign packaging, ad trafficking tool">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-white text-gray-900 font-sans">
-  <header class="w-full border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
-      <img src="assets/images/dataraiils-logo.png" alt="dataraiils logo" class="h-8" />
-      <nav class="space-x-6 text-sm">
-        <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
-        <a href="terms.html" class="hover:text-purple-600">Terms</a>
-        <a href="mailto:hello@dataraiils.ai" class="hover:text-purple-600">Contact</a>
-      </nav>
-    </div>
+<body>
+  <header class="nav-bar">
+    <div class="logo">Dataraiils</div>
+    <nav>
+      <a href="#product" class="nav-link">Product</a>
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#why-it-matters" class="nav-link">Why It Matters</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#demo" class="button-primary">Book a Demo</a>
+    </nav>
   </header>
 
-  <main class="text-center px-6 py-20">
-    <section class="max-w-4xl mx-auto">
-      <h1 class="text-5xl font-bold mb-4 leading-tight text-purple-600">Burn the spreadsheet.</h1>
-      <p class="text-lg text-gray-600 mb-2">Auto-tag. <strong>Validate</strong>. <strong>Launch</strong>. AI-powered trafficking for creative AORs.</p>
-      <p class="text-sm text-gray-500 mt-2">Trusted by ad ops leads at top pharma agencies.</p>
-      <div class="flex justify-center gap-4 mt-6">
-        <a href="#demo" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-medium transition-transform transform hover:scale-105">See it in action</a>
-        <a href="#waitlist" class="bg-white border border-purple-600 text-purple-600 px-6 py-3 rounded-full font-medium hover:bg-purple-50 transition-transform transform hover:scale-105">Join waitlist</a>
-      </div>
-    </section>
+  <section class="hero">
+  <h1>Trafficking, solved.</h1>
+  <p>Auto-tag. Validate. Launch. In minutes.</p>
+  <p class="trust-tagline">Trusted by top pharma ad ops teams.</p>
+  <a href="#how-it-works" class="button-secondary">See How It Works</a>
+</section>
 
-    <section class="mt-32 grid md:grid-cols-2 gap-16 items-center">
-      <img src="assets/images/hero-background-dunes.png" alt="Hero background with dunes" class="rounded shadow object-contain" />
-      <div class="text-left">
-        <h2 class="text-3xl font-bold mb-6 text-purple-600">Manual ops? Not anymore.</h2>
-        <p class="text-gray-700 mb-6">dataraiils automates trafficking from start to finish. No more versioning chaos, missed specs, or tedious QA. Just clean, launch-ready packages.</p>
-        <ul class="list-disc list-inside text-purple-600 space-y-2">
-          <li>Auto-tag assets using AI</li>
-          <li>Validate specs + logic before launch</li>
-          <li>Package everything with one click</li>
-        </ul>
-      </div>
-    </section>
+  <section class="problem" id="why-it-matters">
+    <h2>Trafficking isn’t a workflow problem. It’s a truth problem.</h2>
+    <ul>
+      <li>Specs are missed</li>
+      <li>Tags break attribution</li>
+      <li>Rework kills velocity</li>
+      <li>Delayed launch = delayed revenue</li>
+    </ul>
+    <blockquote>Without Dataraiils, you don’t just risk delay — you risk losing the signal.</blockquote>
+  </section>
 
-    <section class="mt-32 text-left">
-      <h2 class="text-3xl font-bold mb-10 text-center">How it works</h2>
-      <div class="grid md:grid-cols-3 gap-12">
-        <div>
-          <img src="assets/images/ai-upload-step-1.png" alt="AI Upload Step" class="h-[250px] w-auto mx-auto object-contain mb-4 rounded" />
-          <h3 class="text-xl font-semibold mb-2 text-purple-600">Step 1: <strong>Upload</strong></h3>
-          <p class="text-gray-600">Drop in your creative files. No naming conventions required — AI does the work.</p>
-        </div>
-        <div>
-          <img src="assets/images/ai-tagging-validation-step-2.png" alt="AI Tagging and Validation" class="h-[250px] w-auto mx-auto object-contain mb-4 rounded" />
-          <h3 class="text-xl font-semibold mb-2 text-purple-600">Step 2: <strong>Validate</strong></h3>
-          <p class="text-gray-600">The system tags assets, validates specs, flags issues — and recommends fixes.</p>
-        </div>
-        <div>
-          <img src="assets/images/trafficking-package-generator-step-3.png" alt="Trafficking Package Generator" class="h-[250px] w-auto mx-auto object-contain mb-4 rounded" />
-          <h3 class="text-xl font-semibold mb-2 text-purple-600">Step 3: <strong>Launch</strong></h3>
-          <p class="text-gray-600">Download trafficking-ready folders, with metadata, previews, and QA sheets.</p>
-        </div>
-      </div>
-    </section>
- <section class="mt-32 max-w-3xl mx-auto text-center px-6">
+  <section class="features" id="product">
+    <h2>A broken handoff. A chaotic process. A forgotten system layer.</h2>
+    <ul>
+      <li>Upload raw assets</li>
+      <li>AI scans + tags</li>
+      <li>Validate specs + naming</li>
+      <li>Generate trafficking sheet</li>
+      <li>Export, archive, deliver</li>
+    </ul>
+  </section>
+
+  <section class="operator-pain">
+    <h2>We know the SLA is 10–15 days. We also know that’s insane.</h2>
+    <p>This wasn’t built in a lab. It was built in the middle of live campaigns.</p>
+    <ul>
+      <li>Delay is operational theater</li>
+      <li>Manual rework posing as process</li>
+      <li>Delayed launch = delayed revenue</li>
+      <li>Unstructured assets = unmeasurable campaigns</li>
+    </ul>
+    <blockquote>“We were launching multimillion-dollar campaigns by stitching filenames in Slack. Dataraiils changed everything.”</blockquote>
+  </section>
+
+  <section class="how-it-works" id="how-it-works">
+    <h2>Three steps. One clean launch.</h2>
+    <ol>
+      <li>Drop assets</li>
+      <li>Dataraiils analyzes + tags</li>
+      <li>Download your launch pack</li>
+    </ol>
+  </section>
+
+  <section class="proof">
+    <h2>Trusted by the people who can’t afford to get it wrong.</h2>
+    <blockquote>“This saved us 15 hours per campaign. And 15 headaches.” – Senior Ad Ops Lead, Top 10 Pharma Agency</blockquote>
+  </section>
+
+  <section class="faq">
+  <h2>FAQ</h2>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFAQ(this)">What is Dataraiils used for?<span class="faq-icon">+</span></button>
+    <div class="faq-answer">Dataraiils is a creative trafficking automation tool. It tags, validates, and packages final creative assets for campaign launch—saving time and reducing human error.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFAQ(this)">How does Dataraiils improve ad operations?<span class="faq-icon">+</span></button>
+    <div class="faq-answer">It eliminates manual file naming, metadata tagging, trafficking sheet creation, and QA cycles. Ad ops teams save hours per campaign and reduce rework.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFAQ(this)">Does Dataraiils replace my ad ops team?<span class="faq-icon">+</span></button>
+    <div class="faq-answer">Not at all. Dataraiils amplifies your team. It handles the repetitive work—tagging, validating, trafficking—so they can focus on execution. QA happens in Dataraiils, which means fewer errors, less rework, and faster launches.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFAQ(this)">Can we customize fields and naming rules?<span class="faq-icon">+</span></button>
+    <div class="faq-answer">Yes. During onboarding, we sync with your BRD to match agency-specific naming conventions, taxonomies, and metadata structures.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFAQ(this)">How long does onboarding take?<span class="faq-icon">+</span></button>
+    <div class="faq-answer">If you’ve got a BRD, we’re ready. Setup moves at your pace—with full support and zero code.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFAQ(this)">Can I try Dataraiils before committing?<span class="faq-icon">+</span></button>
+    <div class="faq-answer">Absolutely. Book a demo and explore how it fits your workflow.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFAQ(this)">Does Dataraiils support multiple languages?<span class="faq-icon">+</span></button>
+    <div class="faq-answer">Yes. Our AI can validate and tag assets in any language—supporting global campaigns from day one.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFAQ(this)">Can Dataraiils pre-build trafficking templates for each media platform?<span class="faq-icon">+</span></button>
+    <div class="faq-answer">Yes. We can map specs and metadata to match channel-specific requirements—before the creative is even made.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFAQ(this)">Can you export to our media systems or data lake?<span class="faq-icon">+</span></button>
+    <div class="faq-answer">Yes. Dataraiils can deliver directly to tools like Adobe, Snowflake, DC, Google, or Meta—making reporting and compliance seamless.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFAQ(this)">Does Dataraiils store our files?<span class="faq-icon">+</span></button>
+    <div class="faq-answer">No. Files are processed securely and deleted after export. But every job makes us smarter—helping flag gaps and update your BRD in real-time.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-question" onclick="toggleFAQ(this)">How does Dataraiils help our global agency network?<span class="faq-icon">+</span></button>
+    <div class="faq-answer">It standardizes trafficking across teams, markets, and partners—ensuring metadata consistency for scalable reporting, compliance, and measurement.</div>
+  </div>
+</section>
+
+  <section class="final-cta">
+    <h2>You’ve fixed media. You’ve nailed measurement. But you still launch in chaos.</h2>
+    <p>The spreadsheet’s still winning. Dataraiils ends that.</p>
+    <div>
+      <a href="#" class="button-primary">Book a Demo</a>
+      <a href="#" class="button-outline">Talk to Product</a>
+      <a href="#" class="button-secondary">Start Using Dataraiils</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <a href="#">About</a>
+      <a href="#">Product</a>
+      <a href="#">Use Cases</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+    <div>
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+<script>
+function toggleFAQ(button) {
+  const answer = button.nextElementSibling;
+  const icon = button.querySelector('.faq-icon');
+  const isOpen = answer.style.display === "block";
+  answer.style.display = isOpen ? "none" : "block";
+  icon.textContent = isOpen ? "+" : "−";
+}
+</script>
+
+<style>
+.faq-item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+.faq-question {
+  font-size: 1rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  color: #2d2d2d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-question:hover {
+  color: #6200ee; /* brand purple */
+}
+.faq-icon {
+  font-size: 1.25rem;
+  margin-left: 1rem;
+  color: #6200ee;
+  transition: transform 0.2s ease;
+}
+.faq-answer {
+  margin-top: 0.5rem;
+  display: none;
+  font-size: 0.95rem;
+  color: #555;
+}
+</style>
+</body>
+</html>
+
+
+<section class="mt-32 max-w-3xl mx-auto text-center px-6">
       <blockquote class="bg-gray-100 border-l-4 border-purple-600 text-gray-800 italic text-lg px-6 py-8 rounded">
         “You took the most broken, thankless part of advertising — trafficking — and made it beautiful, intuitive, and invisible. That’s not software. That’s art.”
       </blockquote>
     </section>
-    <section class="mt-32 bg-gray-100 p-10 rounded">
-      <h2 class="text-2xl font-bold mb-6 text-purple-600">FAQ</h2>
-      <details class="mb-4">
-        <summary class="font-medium cursor-pointer text-purple-600">Do you store creative files?</summary>
-        <p class="text-gray-700 mt-2">No. Files are temporarily processed and deleted. Nothing is saved or shared.</p>
-      </details>
-      <details class="mb-4">
-        <summary class="font-medium cursor-pointer text-purple-600">Does this replace our trafficking team?</summary>
-        <p class="text-gray-700 mt-2">No — it supports them. dataraiils speeds up workflow and reduces risk. Your team stays in control.</p>
-      </details>
-      <details>
-        <summary class="font-medium cursor-pointer text-purple-600">What file types are supported?</summary>
-        <p class="text-gray-700 mt-2">HTML5, JPG, PNG, MP4, and PDF — with more on the roadmap.</p>
-      </details>
-    </section>
+
 
     <section id="waitlist" class="mt-32 text-center">
       <h2 class="text-3xl font-bold mb-4 text-purple-600">Want early access?</h2>
