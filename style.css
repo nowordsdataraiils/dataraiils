@@ -53,6 +53,73 @@ blockquote {
   text-align: center;
 }
 
+/* Utility */
+.brand-purple {
+  color: #9605DF;
+}
+
+/* Section 1 - Pain */
+.pain-section {
+  background-color: #F5F5F5;
+  padding: 80px 24px;
+}
+.pain-wrapper {
+  max-width: 600px;
+}
+
+/* Transition */
+.transition {
+  text-align: center;
+  padding: 40px 24px;
+}
+.transition hr {
+  border: 0;
+  border-top: 1px solid #9605DF;
+  margin-bottom: 16px;
+}
+.transition p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Section 2 - Cost */
+.cost-section {
+  background-color: #FAFAFA;
+  padding: 60px 24px;
+}
+.cost-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.stats-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0;
+}
+.stats-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 24px 0;
+  border-bottom: 1px solid #E5E7EB;
+}
+.stats-list li:last-child {
+  border-bottom: none;
+}
+.stat {
+  font-weight: 700;
+  font-size: 24px;
+}
+.desc {
+  font-weight: 400;
+  font-size: 16px;
+}
+.equals {
+  margin: 0 8px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
 /* Nav */
 .nav-bar {
   display: flex;
