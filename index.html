@@ -7,8 +7,8 @@
   <title>Trafficking shouldn’t suck | Dataraiils</title>
   <meta name="description" content="Auto-tag, validate, and ship ad assets without the spreadsheet.">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/images/favicon-dataraiils.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/images/favicon-dataraiils.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="nav-bar">
@@ -51,7 +51,7 @@
       <p>Burn the spreadsheet.</p>
     </div>
 
-    <section id="inside-the-pain" class="pain-section">
+  <section id="inside-the-pain" class="section pain-section">
     <div class="pain-wrapper">
       <h2>SLA: 10–15 days. That’s not a standard. That’s a red flag.</h2>
       <p>This wasn’t built in a lab. It was built in the middle of live campaigns.</p>
@@ -69,7 +69,7 @@
     <p>Here’s what it’s costing you.</p>
   </div>
 
-  <section id="cost-of-delay" class="cost-section">
+  <section id="cost-of-delay" class="section cost-section">
     <div class="cost-wrapper">
       <h2>Delay isn’t annoying. It’s expensive.</h2>
       <p>This isn’t theoretical. This is every campaign.</p>
@@ -315,62 +315,52 @@
 
 <footer class="site-footer">
   <div class="footer-grid">
-    <div class="footer-left">
-      <img src="assets/images/dataraiils-logo.png" alt="Dataraiils Logo" class="footer-logo">
-      <p class="footer-tagline">Made by ops. For ops.</p>
-    </div>
+    <img src="assets/images/dataraiils-logo.png" alt="Dataraiils Logo" class="footer-logo">
     <nav class="footer-nav">
       <a href="#product">Product</a>
       <a href="#use-cases">Use Cases</a>
       <a href="#about">About</a>
       <a href="#demo">Book Demo</a>
     </nav>
-  <div class="footer-legal">
-      <p>© 2025 dataraiils.ai</p>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-      <a href="https://www.linkedin.com/company/dataraiils" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
   </div>
-
 </footer>
 
 <script>
-  // Optional scroll animation support
-    const reveal = () => {
-      const elements = document.querySelectorAll('.fade-in, .step-card');
-      const triggerBottom = window.innerHeight * 0.9;
-      elements.forEach(el => {
-        const boxTop = el.getBoundingClientRect().top;
-        if (boxTop < triggerBottom) {
-          el.classList.add('visible');
-        } else {
-          el.classList.remove('visible');
-        }
-      });
-    };
-    window.addEventListener('scroll', reveal);
-    window.addEventListener('load', reveal);
-
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
+  // Scroll reveal animations
+  const revealElements = document.querySelectorAll('.fade-in, .step-card, .section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
     });
+  }, { threshold: 0.1 });
 
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const answer = document.getElementById(btn.getAttribute('aria-controls'));
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        item.classList.toggle('open');
-        btn.setAttribute('aria-expanded', String(!expanded));
-        if (answer) {
-          answer.setAttribute('aria-hidden', expanded ? 'true' : 'false');
-        }
-      });
+  revealElements.forEach((el, index) => {
+    el.style.transitionDelay = `${index * 100}ms`;
+    observer.observe(el);
+  });
+
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const answer = document.getElementById(btn.getAttribute('aria-controls'));
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if (answer) {
+        answer.setAttribute('aria-hidden', expanded ? 'true' : 'false');
+      }
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
