@@ -122,7 +122,7 @@ blockquote {
   margin-bottom: 16px;
 }
 .transition p {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -233,7 +233,7 @@ blockquote {
   color: #1B1B1F;
 }
 .quote-card .quote-attribution {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #6B7280;
   margin-top: 8px;
@@ -282,7 +282,7 @@ blockquote {
 .proof-quote .quote-attribution {
   display: block;
   margin-top: 16px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -513,7 +513,7 @@ blockquote {
   margin-bottom: 24px;
 }
 .hero-microproof {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: #6B7280;
   margin-top: 0;
@@ -587,7 +587,7 @@ blockquote {
 .site-footer {
   background-color: #F5F5F5;
   padding: 48px 24px;
-  font-size: 14px;
+  font-size: 16px;
   color: #1B1B1F;
 }
 .footer-grid {
