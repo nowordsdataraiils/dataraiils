@@ -613,8 +613,11 @@ blockquote {
   text-decoration: none;
   margin-bottom: 8px;
 }
+.nav-link:hover,
+.button-secondary:hover,
 .footer-nav a:hover,
 .footer-legal a:hover {
+  color: #7E04B9;
   text-decoration: underline;
 }
 
