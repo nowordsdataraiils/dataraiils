@@ -16,12 +16,15 @@
   <div class="logo">
     <img src="assets/images/dataraiils-logo.png" alt="Dataraiils Logo" style="height: 32px;">
   </div>
+  <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
   <nav>
-    <a href="#product" class="nav-link">Product</a>
-    <a href="#how-it-works" class="nav-link">How It Works</a>
-    <a href="#bottleneck" class="nav-link">The Bottleneck</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#demo" class="button-primary">Fix Trafficking</a>
+    <div id="nav-menu">
+      <a href="#product" class="nav-link">Product</a>
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#bottleneck" class="nav-link">The Bottleneck</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#demo" class="button-primary">Fix Trafficking</a>
+    </div>
   </nav>
 </header>
 
@@ -216,17 +219,23 @@
 
 <script>
   // Optional scroll animation support
-  const reveal = () => {
-    const elements = document.querySelectorAll('.fade-in');
-    const triggerBottom = window.innerHeight * 0.9;
-    elements.forEach(el => {
-      const boxTop = el.getBoundingClientRect().top;
-      if (boxTop < triggerBottom) el.classList.add('visible');
+    const reveal = () => {
+      const elements = document.querySelectorAll('.fade-in');
+      const triggerBottom = window.innerHeight * 0.9;
+      elements.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) el.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
+
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
     });
-  };
-  window.addEventListener('scroll', reveal);
-  window.addEventListener('load', reveal);
-</script>
+  </script>
 
 </body>
 </html>
