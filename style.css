@@ -120,6 +120,72 @@ blockquote {
   font-size: 16px;
 }
 
+/* Launch Section */
+.launch-section {
+  background-color: #FAFAFA;
+}
+.launch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.launch-copy {
+  flex: 1 1 50%;
+  max-width: 600px;
+}
+.launch-copy h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1B1B1F; /* Navy Ink */
+  margin-bottom: 16px;
+}
+.launch-copy p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #6B7280; /* Slate Fog */
+  line-height: 1.6;
+}
+.launch-quote {
+  flex: 1 1 50%;
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quote-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('assets/images/dataraiils-app-ui-preview.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px);
+}
+.quote-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-left: 4px solid #6D2EFF; /* Brand Purple */
+  padding: 24px;
+  max-width: 480px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 1;
+}
+.quote-card p {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1B1B1F;
+}
+.quote-card .quote-attribution {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6B7280;
+  margin-top: 8px;
+}
+
 /* Three Step Process Section */
 .section-headline {
   width: 100%;
@@ -408,6 +474,17 @@ footer {
     .hero-cta .button-secondary {
       width: 100%;
       margin-left: 0;
+    }
+    .launch-wrapper {
+      flex-direction: column-reverse;
+    }
+    .launch-copy,
+    .launch-quote {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+    .launch-quote {
+      min-height: 240px;
     }
     .nav-bar {
       flex-direction: row;
