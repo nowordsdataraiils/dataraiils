@@ -195,6 +195,63 @@ blockquote {
   margin-top: 8px;
 }
 
+/* Proof Section */
+#proof {
+  background-color: #F5F5F5;
+}
+
+.proof-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.proof-logs {
+  flex: 1 1 40%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.proof-logs li {
+  margin-bottom: 16px;
+}
+
+.proof-quote {
+  flex: 1 1 60%;
+  border: 1px solid #E5E7EB;
+  border-left: 4px solid #9605DF;
+  padding: 24px;
+  background-color: #FFFFFF;
+  max-width: 600px;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: normal;
+  color: #1B1B1F;
+  margin: 0;
+}
+
+.proof-quote .quote-attribution {
+  display: block;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .proof-content {
+    flex-direction: column;
+  }
+
+  .proof-quote {
+    max-width: 100%;
+  }
+}
+
 /* Three Step Process Section */
 .section-headline {
   width: 100%;
