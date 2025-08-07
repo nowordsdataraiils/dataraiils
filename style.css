@@ -68,6 +68,7 @@ blockquote {
   --color-bg-muted: #F5F5F5;
   --color-bg-light: #FAFAFA;
   --color-hover: #E5E7EB;
+  --color-border: #E2E8F0;
   --color-border-light: #EEEEEE;
   --focus-outline: 2px solid #E5E7EB;
 }
