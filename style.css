@@ -38,6 +38,7 @@ p {
 li {
   font-size: 16px;
   line-height: 1.6;
+  max-width: 72ch;
 }
 ul, ol {
   margin-left: 20px;
@@ -52,8 +53,6 @@ blockquote {
 }
 
 /* Layout Containers */
-:root {
-  --gutter: 16px;
 :root {
   --gutter: 16px;
 
@@ -72,7 +71,6 @@ blockquote {
   --color-border-light: #EEEEEE;
   --focus-outline: 2px solid #E5E7EB;
 }
-}
 
 .layout-grid {
   display: grid;
@@ -81,14 +79,22 @@ blockquote {
   row-gap: 80px;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 var(--gutter);
+  padding: 0 60px;
 }
 .layout-grid > * {
   grid-column: 1 / -1;
 }
 
 .section {
-  padding: 80px 0;
+  padding: 120px 0;
+}
+
+main > section:nth-of-type(odd) {
+  background-color: #FFFFFF;
+}
+
+main > section:nth-of-type(even) {
+  background-color: #F7F7F7;
 }
 
 .text-center {
@@ -734,6 +740,12 @@ blockquote {
 
 /* Media Queries */
   @media screen and (max-width: 768px) {
+    .layout-grid {
+      padding: 0 24px;
+    }
+    .section {
+      padding: 100px 0;
+    }
     h1 {
       font-size: 36px;
     }
