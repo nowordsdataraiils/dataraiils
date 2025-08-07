@@ -4,23 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms of Use – dataraiils.ai</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/images/favicon-dataraiils.png" type="image/png" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-900 font-sans">
-  <main class="max-w-3xl mx-auto py-20 px-6">
-    <h1 class="text-4xl font-bold mb-6 text-purple-600">Terms of Use</h1>
-    <p class="text-gray-700 mb-6">Effective date: July 27, 2025</p>
+<body>
 
-    <p class="text-gray-700 mb-4">By accessing and using dataraiils.ai, you agree to these Terms of Use. If you do not agree, do not use the platform.</p>
+<header class="nav-bar">
+  <div class="logo">
+    <img src="assets/images/dataraiils-logo.png" alt="Dataraiils Logo" style="height: 32px;">
+  </div>
+  <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+  <nav id="nav-menu">
+    <a href="index.html#product" class="nav-link">Product</a>
+    <a href="index.html#use-cases" class="nav-link">Use Cases</a>
+    <a href="index.html#about" class="nav-link">About</a>
+    <a href="index.html#demo" class="button-primary">Book Demo</a>
+  </nav>
+</header>
 
-    <p class="text-gray-700 mb-4">dataraiils.ai is provided as-is without any warranties. We do not guarantee uninterrupted availability or the accuracy of AI-generated outputs.</p>
+<main class="layout-grid">
+  <section class="section">
+    <h1>Terms of Use</h1>
+    <p>Effective date: July 27, 2025</p>
 
-    <p class="text-gray-700 mb-4">You may not use the site to upload unlawful, offensive, or confidential materials. You retain ownership of all files uploaded, but grant us temporary rights to process them using AI.</p>
+    <p>By accessing and using dataraiils.ai, you agree to these Terms of Use. If you do not agree, do not use the platform.</p>
 
-    <p class="text-gray-700 mb-4">We reserve the right to modify these terms at any time. Changes will be posted to this page with an updated effective date.</p>
+    <p>dataraiils.ai is provided as-is without any warranties. We do not guarantee uninterrupted availability or the accuracy of AI-generated outputs.</p>
 
-    <p class="text-gray-700">For questions, contact <a href="mailto:legal@dataraiils.ai" class="text-purple-600 hover:underline">legal@dataraiils.ai</a>.</p>
-  </main>
+    <p>You may not use the site to upload unlawful, offensive, or confidential materials. You retain ownership of all files uploaded, but grant us temporary rights to process them using AI.</p>
+
+    <p>We reserve the right to modify these terms at any time. Changes will be posted to this page with an updated effective date.</p>
+
+    <p>For questions, contact <a href="mailto:legal@dataraiils.ai">legal@dataraiils.ai</a>.</p>
+  </section>
+</main>
+
+<script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
+</script>
+
 </body>
 </html>

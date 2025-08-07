@@ -4,23 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy – dataraiils.ai</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/images/favicon-dataraiils.png" type="image/png" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-900 font-sans">
-  <main class="max-w-3xl mx-auto py-20 px-6">
-    <h1 class="text-4xl font-bold mb-6 text-purple-600">Privacy Policy</h1>
-    <p class="text-gray-700 mb-6">Effective date: July 27, 2025</p>
+<body>
 
-    <p class="text-gray-700 mb-4">dataraiils.ai does not store any creative files. Files are processed temporarily and automatically deleted upon completion. We do not collect personal data from uploaded assets.</p>
+<header class="nav-bar">
+  <div class="logo">
+    <img src="assets/images/dataraiils-logo.png" alt="Dataraiils Logo" style="height: 32px;">
+  </div>
+  <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+  <nav id="nav-menu">
+    <a href="index.html#product" class="nav-link">Product</a>
+    <a href="index.html#use-cases" class="nav-link">Use Cases</a>
+    <a href="index.html#about" class="nav-link">About</a>
+    <a href="index.html#demo" class="button-primary">Book Demo</a>
+  </nav>
+</header>
 
-    <p class="text-gray-700 mb-4">We do not sell, rent, or share any data with third parties. Data processed during AI analysis is held in memory only for the duration of the session and not logged or reused.</p>
+<main class="layout-grid">
+  <section class="section">
+    <h1>Privacy Policy</h1>
+    <p>Effective date: July 27, 2025</p>
 
-    <p class="text-gray-700 mb-4">This site uses analytics solely to understand product usage patterns in aggregate, not to track individuals. Any data collected is anonymized.</p>
+    <p>dataraiils.ai does not store any creative files. Files are processed temporarily and automatically deleted upon completion. We do not collect personal data from uploaded assets.</p>
 
-    <p class="text-gray-700 mb-4">By using this site, you agree to this policy. Updates will be posted to this page.</p>
+    <p>We do not sell, rent, or share any data with third parties. Data processed during AI analysis is held in memory only for the duration of the session and not logged or reused.</p>
 
-    <p class="text-gray-700">If you have questions, please contact us at <a href="mailto:privacy@dataraiils.ai" class="text-purple-600 hover:underline">privacy@dataraiils.ai</a>.</p>
-  </main>
+    <p>This site uses analytics solely to understand product usage patterns in aggregate, not to track individuals. Any data collected is anonymized.</p>
+
+    <p>By using this site, you agree to this policy. Updates will be posted to this page.</p>
+
+    <p>If you have questions, please contact us at <a href="mailto:privacy@dataraiils.ai">privacy@dataraiils.ai</a>.</p>
+  </section>
+</main>
+
+<script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
+</script>
+
 </body>
 </html>
