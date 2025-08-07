@@ -665,7 +665,7 @@ transition: opacity 0.3s ease-out;
 /* FAQ */
 .faq-section {
   padding: 120px 0;
-  background-color: var(--color-white);
+  background-color: #F7F7F7;
 }
 
 .faq-heading {
