@@ -55,6 +55,10 @@ blockquote {
 
 /* Nav */
 .nav-bar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,6 +71,15 @@ blockquote {
   color: #1B1B1F;
   text-decoration: none;
   font-weight: 500;
+}
+
+.logo img {
+  height: 40px;
+  transition: height 0.2s ease;
+}
+
+.nav-bar.shrink .logo img {
+  height: 32px;
 }
 
 /* Buttons */
