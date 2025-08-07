@@ -135,7 +135,8 @@ blockquote {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: left center;
+  opacity: 0.08;
   z-index: 0;
 }
 .hero-overlay {
@@ -144,22 +145,40 @@ blockquote {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.1);
+  background: radial-gradient(circle at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0.08) 100%);
   z-index: 1;
+  pointer-events: none;
+}
+.hero-trails {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 40%;
+  height: 20%;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(
+    to right,
+    rgba(150, 5, 223, 0.15) 0px,
+    rgba(150, 5, 223, 0.15) 2px,
+    transparent 2px,
+    transparent 12px
+  );
+  opacity: 0.2;
+  z-index: 2;
   pointer-events: none;
 }
 .hero-content {
   grid-column: 1 / span 6;
   position: relative;
-  z-index: 2;
-  max-width: 600px;
+  z-index: 3;
+  max-width: 580px;
   padding-left: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .hero h1 {
-  font-size: 48px;
+  font-size: 60px;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 16px;
@@ -167,20 +186,19 @@ blockquote {
 .hero .lead {
   font-size: 20px;
   font-weight: 400;
-  line-height: 1.4;
-  margin-bottom: 32px;
+  line-height: 1.5;
+  color: #6B7280;
+  margin-bottom: 24px;
 }
-.hero-subtext,
 .hero-microproof {
   font-size: 14px;
-  color: #888888;
-  margin-top: 12px;
-}
-.hero-microproof {
-  margin-top: 4px;
+  font-weight: 500;
+  color: #6B7280;
+  margin-top: 0;
 }
 .hero-cta {
-  margin-top: 32px;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 /* Animations */
@@ -189,6 +207,9 @@ blockquote {
   transform: translateY(20px);
   transition: all 0.6s ease-out;
 }
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
@@ -210,6 +231,9 @@ footer {
     }
     .hero {
       grid-template-columns: 1fr;
+    }
+    .hero-bg {
+      object-position: left bottom;
     }
     .hero-content {
       grid-column: 1;
