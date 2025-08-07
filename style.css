@@ -51,6 +51,15 @@ blockquote {
   border-left: 3px solid var(--color-brand);
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not(.button-primary):hover {
+  text-decoration: underline;
+}
+
 /* Layout Containers */
 :root {
   --gutter: 16px;
@@ -62,7 +71,7 @@ blockquote {
   --color-gray-500: #444444;
   --color-gray-600: #4B4B50;
   --color-brand: #9605DF;
-  --color-brand-dark: #7E04B9;
+  --color-brand-dark: #7C03BC;
   --color-brand-accent: #602EFF;
   --color-white: #FFFFFF;
   --color-bg-muted: #F5F5F5;
@@ -89,6 +98,12 @@ blockquote {
 
 .section {
   padding: 80px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
 }
 
 .text-center {
@@ -360,7 +375,7 @@ blockquote {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   opacity: 0;
   transform: translateY(20px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .step-card:hover {
@@ -457,16 +472,27 @@ blockquote {
   border: none;
   border-radius: 999px;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
-.button-primary:hover {
-  background-color: var(--color-brand-dark);
-  box-shadow: 0 0 8px rgba(150, 5, 223, 0.4);
-  transform: scale(1.05);
+
+@media (hover: hover) {
+  .button-primary:hover {
+    background-color: var(--color-brand-dark);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
 }
 .button-primary:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(150, 5, 223, 0.5);
+}
+
+.button-primary:active {
+  background-color: var(--color-brand-dark);
+  transform: none;
+  transition: background-color 0s, transform 0s;
 }
 .button-secondary {
 .button-secondary {
@@ -588,11 +614,11 @@ blockquote {
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.6s ease-out;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.delay-1 { transition-delay: 0.2s; }
-.delay-2 { transition-delay: 0.4s; }
-.delay-3 { transition-delay: 0.6s; }
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
@@ -685,7 +711,6 @@ blockquote {
 .nav-link:hover,
 .footer-nav a:hover,
 .footer-legal a:hover {
-  color: #7E04B9;
   text-decoration: underline;
 }
 
