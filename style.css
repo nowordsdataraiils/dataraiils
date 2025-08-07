@@ -68,6 +68,7 @@ blockquote {
   --color-bg-muted: #F5F5F5;
   --color-bg-light: #FAFAFA;
   --color-hover: #E5E7EB;
+  --color-border: #E2E8F0;
   --color-border-light: #EEEEEE;
   --focus-outline: 2px solid #E5E7EB;
 }
@@ -496,7 +497,7 @@ blockquote {
   height: 100%;
   object-fit: cover;
   object-position: left center;
-  opacity: 0.08;
+  opacity: 0.5;
   z-index: 0;
 }
 .hero-overlay {
@@ -505,7 +506,7 @@ blockquote {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0.08) 100%);
+  background: radial-gradient(circle at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 100%);
   z-index: 1;
   pointer-events: none;
 }
@@ -610,12 +611,14 @@ blockquote {
   transition: transform 0.3s ease;
 }
 .faq-answer {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
   margin-top: 8px;
   font-size: 16px;
 }
 .faq-item.open .faq-answer {
-  display: block;
+  max-height: 500px;
 }
 .faq-item.open .faq-icon {
   transform: rotate(180deg);
