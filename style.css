@@ -656,12 +656,8 @@ blockquote {
 .site-footer {
   background-color: var(--color-bg-muted);
   padding: 48px 24px;
-.site-footer {
-  background-color: var(--color-bg-muted);
-  padding: 48px 24px;
   font-size: 16px;
   color: var(--color-ink);
-}
 }
 .footer-grid {
   display: grid;
