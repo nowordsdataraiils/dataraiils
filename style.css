@@ -54,6 +54,7 @@ blockquote {
 /* Layout Containers */
 :root {
   --gutter: 16px;
+  --focus-outline: 2px solid #E5E7EB;
 }
 
 .layout-grid {
@@ -338,6 +339,9 @@ blockquote {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
 }
 
 .step-card img {
@@ -361,6 +365,11 @@ blockquote {
   font-size: 16px;
   color: #4B4B50;
   max-width: 300px;
+}
+
+.step-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media screen and (max-width: 768px) {
@@ -604,9 +613,20 @@ blockquote {
   text-decoration: none;
   margin-bottom: 8px;
 }
+.nav-link:hover,
+.button-secondary:hover,
 .footer-nav a:hover,
 .footer-legal a:hover {
+  color: #7E04B9;
   text-decoration: underline;
+}
+
+.nav-link:focus-visible,
+.button-secondary:focus-visible,
+.footer-nav a:focus-visible,
+.footer-legal a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
 }
 .footer-legal {
   text-align: right;
