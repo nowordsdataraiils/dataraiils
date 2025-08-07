@@ -142,44 +142,52 @@
   </div>
 </section>
 
+
 <section id="faq" class="section faq-block">
   <h2>You’ve got questions. We work in answers.</h2>
   <p class="faq-intro">FAQ – Dataraiils (11 Questions)</p>
+  <div class="faq-container">
   <div class="faq-grid">
-    <div class="faq-item">
-      <button class="faq-question" id="faq-question-1" aria-expanded="false" aria-controls="faq-answer-1">
-        <span>How fast can we go live with Dataraiils?</span>
+<div class="faq-item">
+  <button class="faq-question" id="faq-question-1" aria-expanded="false" aria-controls="faq-answer-1">
+    <span>How fast can we go live with Dataraiils?</span>
+    <svg class="faq-icon" aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1">
+      <path d="M3 4.5L6 7.5L9 4.5" />
+    </svg>
+  </button>
+  <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" aria-hidden="true">
+    <p>Most teams go live in under 2 days. No IT lift required.</p>
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question" id="faq-question-2" aria-expanded="false" aria-controls="faq-answer-2">
+    <span>Does it integrate with our trafficking tools (e.g. CM360, SharePoint)?</span>
+    <svg class="faq-icon" aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1">
+      <path d="M3 4.5L6 7.5L9 4.5" />
+    </svg>
+  </button>
         <svg class="faq-icon" aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1">
           <path d="M3 4.5L6 7.5L9 4.5" />
         </svg>
       </button>
-      <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" aria-hidden="true">
-        <p>Most teams go live in under 2 days. No IT lift required.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" id="faq-question-2" aria-expanded="false" aria-controls="faq-answer-2">
-        <span>Does it integrate with our trafficking tools (e.g. CM360, SharePoint)?</span>
-        <svg class="faq-icon" aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1">
-          <path d="M3 4.5L6 7.5L9 4.5" />
-        </svg>
-      </button>
-      <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" aria-hidden="true">
-        <p>Yes – Dataraiils exports trafficking sheets pre-formatted for CM360, DDM, Meta, YouTube, DV360, and more.</p>
-      </div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" id="faq-question-3" aria-expanded="false" aria-controls="faq-answer-3">
-        <span>What kind of files can I upload?</span>
-        <svg class="faq-icon" aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1">
-          <path d="M3 4.5L6 7.5L9 4.5" />
-        </svg>
-      </button>
-      <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" aria-hidden="true">
-        <p>Video, display, audio, HTML5, or static – if it ships, we take it.</p>
-      </div>
-    </div>
-    <div class="faq-item">
+<div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" aria-hidden="true">
+  <p>Yes – Dataraiils exports trafficking sheets pre-formatted for CM360, DDM, Meta, YouTube, DV360, and more.</p>
+</div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question" id="faq-question-3" aria-expanded="false" aria-controls="faq-answer-3">
+    <span>What kind of files can I upload?</span>
+    <svg class="faq-icon" aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1">
+      <path d="M3 4.5L6 7.5L9 4.5" />
+    </svg>
+  </button>
+  <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" aria-hidden="true">
+    <p>Video, display, audio, HTML5, or static – if it ships, we take it.</p>
+  </div>
+</div>
+
       <button class="faq-question" id="faq-question-4" aria-expanded="false" aria-controls="faq-answer-4">
         <span>Can we override or edit AI-suggested tags?</span>
         <svg class="faq-icon" aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1">
@@ -267,6 +275,7 @@
         <p>Seat-based SaaS, with optional add-ons. No bloated enterprise contracts.</p>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -334,15 +343,13 @@
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.closest('.faq-item');
-        item.classList.toggle('open');
-        const item = btn.parentElement;
         const answer = document.getElementById(btn.getAttribute('aria-controls'));
         const expanded = btn.getAttribute('aria-expanded') === 'true';
+        item.classList.toggle('open');
         btn.setAttribute('aria-expanded', String(!expanded));
         if (answer) {
           answer.setAttribute('aria-hidden', expanded ? 'true' : 'false');
         }
-        item.classList.toggle('open');
       });
     });
   </script>
