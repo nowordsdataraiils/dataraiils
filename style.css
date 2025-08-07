@@ -132,6 +132,13 @@ main > section:nth-of-type(even) {
   background-color: #F7F7F7;
 
 .section {
+padding: 80px 0;
+opacity: 0;
+transition: opacity 0.3s ease-out;
+}
+
+.section.visible {
+  opacity: 1;
 
 }
 
@@ -529,6 +536,10 @@ main > section:nth-of-type(even) {
   transition: background-color 0s, transform 0s;
 }
 .button-secondary {
+  color: #7E04B9;
+  text-decoration: underline;
+}
+.button-secondary {
   background-color: #9605DF;
   color: #FFFFFF;
   padding: 16px 32px;
@@ -732,8 +743,11 @@ main > section:nth-of-type(even) {
 .nav-link:hover,
 .footer-nav a:hover,
 .footer-legal a:hover {
+.button-secondary {
   color: #7E04B9;
+  text-decoration: underline; /* optional, if you added it earlier */
 }
+
   text-decoration: underline;
 }
 
