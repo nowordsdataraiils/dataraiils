@@ -335,37 +335,65 @@ blockquote {
   margin-right: auto;
 }
 
-.three-step-process {
-  padding: 80px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+.three-steps {
   text-align: center;
+  padding: 64px 24px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.three-steps .subtext {
+  color: var(--color-gray-600);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .step-card {
-  flex: 1 1 30%;
-  max-width: 380px;
+  background: #f8f8f8;
   padding: 32px;
-  background: transparent;
-  min-height: 320px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   opacity: 0;
   transform: translateY(20px);
-  transition: all 0.6s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.step-card img {
-  width: 72px;
-  height: 72px;
-  object-fit: contain;
-  margin-bottom: 24px;
+.step-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.step-icon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-brand);
+  margin: 0 auto 16px;
+  border-radius: 12px;
+  position: relative;
+  transform: translateY(10px);
+  transition: transform 0.6s ease-out;
+}
+
+.step-icon::after {
+  content: attr(data-step);
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+  background: var(--color-brand-dark);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .step-card h3 {
@@ -382,6 +410,7 @@ blockquote {
   font-size: 16px;
   color: var(--color-gray-600);
   max-width: 300px;
+  margin: 0 auto;
 }
 
 .step-card.visible {
@@ -389,20 +418,13 @@ blockquote {
   transform: translateY(0);
 }
 
-@media screen and (max-width: 768px) {
-  .three-step-process {
-    flex-direction: column;
-    align-items: center;
-  }
+.step-card.visible .step-icon {
+  transform: translateY(0);
+}
 
-  .step-card {
-    max-width: 100%;
-    margin-bottom: 48px;
-  }
-
-  .step-card img {
-    width: 64px;
-    height: 64px;
+@media (min-width: 768px) {
+  .steps-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
