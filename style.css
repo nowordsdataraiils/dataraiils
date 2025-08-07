@@ -146,6 +146,15 @@ blockquote {
   color: #6B7280; /* Slate Fog */
   line-height: 1.6;
 }
+
+.launch-benefits {
+  font-size: 18px;
+  font-weight: 400;
+  color: #6B7280; /* Slate Fog */
+  line-height: 1.6;
+  padding-left: 1.2em;
+  list-style-type: disc;
+}
 .launch-quote {
   flex: 1 1 50%;
   position: relative;
