@@ -54,6 +54,7 @@ blockquote {
 /* Layout Containers */
 :root {
   --gutter: 16px;
+  --focus-outline: 2px solid #E5E7EB;
 }
 
 .layout-grid {
@@ -607,6 +608,14 @@ blockquote {
 .footer-nav a:hover,
 .footer-legal a:hover {
   text-decoration: underline;
+}
+
+.nav-link:focus-visible,
+.button-secondary:focus-visible,
+.footer-nav a:focus-visible,
+.footer-legal a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
 }
 .footer-legal {
   text-align: right;
