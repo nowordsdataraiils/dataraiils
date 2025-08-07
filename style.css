@@ -678,11 +678,17 @@ transition: opacity 0.3s ease-out;
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px 80px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+@media (max-width: 600px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .faq-item {
