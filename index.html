@@ -353,15 +353,13 @@
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.closest('.faq-item');
-        item.classList.toggle('open');
-        const item = btn.parentElement;
         const answer = document.getElementById(btn.getAttribute('aria-controls'));
         const expanded = btn.getAttribute('aria-expanded') === 'true';
+        item.classList.toggle('open');
         btn.setAttribute('aria-expanded', String(!expanded));
         if (answer) {
           answer.setAttribute('aria-hidden', expanded ? 'true' : 'false');
         }
-        item.classList.toggle('open');
       });
     });
   </script>
