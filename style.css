@@ -610,12 +610,14 @@ blockquote {
   transition: transform 0.3s ease;
 }
 .faq-answer {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
   margin-top: 8px;
   font-size: 16px;
 }
 .faq-item.open .faq-answer {
-  display: block;
+  max-height: 500px;
 }
 .faq-item.open .faq-icon {
   transform: rotate(180deg);
