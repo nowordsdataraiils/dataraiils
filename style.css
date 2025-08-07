@@ -54,18 +54,23 @@ blockquote {
 /* Layout Containers */
 :root {
   --gutter: 16px;
+:root {
+  --gutter: 16px;
+
   --color-ink: #1B1B1F;
   --color-muted: #4B5563;
   --color-gray-500: #444444;
   --color-gray-600: #4B4B50;
   --color-brand: #9605DF;
   --color-brand-dark: #7E04B9;
-  --color-brand-accent: #6D2EFF;
+  --color-brand-accent: #602EFF;
   --color-white: #FFFFFF;
   --color-bg-muted: #F5F5F5;
   --color-bg-light: #FAFAFA;
-  --color-border: #E5E7EB;
+  --color-hover: #E5E7EB;
   --color-border-light: #EEEEEE;
+  --focus-outline: 2px solid #E5E7EB;
+}
 }
 
 .layout-grid {
@@ -133,7 +138,7 @@ blockquote {
   margin-bottom: 16px;
 }
 .transition p {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -244,7 +249,7 @@ blockquote {
   color: var(--color-ink);
 }
 .quote-card .quote-attribution {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--color-muted);
   margin-top: 8px;
@@ -293,7 +298,7 @@ blockquote {
 .proof-quote .quote-attribution {
   display: block;
   margin-top: 16px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -350,6 +355,9 @@ blockquote {
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
 }
 
 .step-card img {
@@ -373,6 +381,11 @@ blockquote {
   font-size: 16px;
   color: var(--color-gray-600);
   max-width: 300px;
+}
+
+.step-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media screen and (max-width: 768px) {
@@ -516,7 +529,7 @@ blockquote {
   margin-bottom: 24px;
 }
 .hero-microproof {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--color-muted);
   margin-top: 0;
@@ -590,8 +603,12 @@ blockquote {
 .site-footer {
   background-color: var(--color-bg-muted);
   padding: 48px 24px;
-  font-size: 14px;
+.site-footer {
+  background-color: var(--color-bg-muted);
+  padding: 48px 24px;
+  font-size: 16px;
   color: var(--color-ink);
+}
 }
 .footer-grid {
   display: grid;
@@ -616,9 +633,20 @@ blockquote {
   text-decoration: none;
   margin-bottom: 8px;
 }
+.nav-link:hover,
+.button-secondary:hover,
 .footer-nav a:hover,
 .footer-legal a:hover {
+  color: #7E04B9;
   text-decoration: underline;
+}
+
+.nav-link:focus-visible,
+.button-secondary:focus-visible,
+.footer-nav a:focus-visible,
+.footer-legal a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
 }
 .footer-legal {
   text-align: right;
