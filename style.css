@@ -53,6 +53,7 @@ li {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
+  max-width: 72ch;
 }
 label,
 small {
@@ -108,20 +109,30 @@ a:not(.button-primary):hover {
   row-gap: 80px;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 var(--gutter);
+  padding: 0 60px;
 }
 .layout-grid > * {
   grid-column: 1 / -1;
 }
-
 .section {
-  padding: 80px 0;
+  padding: 120px 0;
   opacity: 0;
   transition: opacity 0.3s ease-out;
 }
 
 .section.visible {
   opacity: 1;
+}
+
+main > section:nth-of-type(odd) {
+  background-color: #FFFFFF;
+}
+
+main > section:nth-of-type(even) {
+  background-color: #F7F7F7;
+
+.section {
+
 }
 
 .text-center {
@@ -769,6 +780,12 @@ a:not(.button-primary):hover {
 
 /* Media Queries */
   @media screen and (max-width: 768px) {
+    .layout-grid {
+      padding: 0 24px;
+    }
+    .section {
+      padding: 100px 0;
+    }
     h1 {
       font-size: 36px;
     }
