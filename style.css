@@ -82,6 +82,26 @@ blockquote {
   height: 32px;
 }
 
+#nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#nav-menu {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#nav-menu .button-primary {
+  margin-left: 20px;
+}
+
+}
+
 /* Buttons */
 .button-primary {
   background-color: #9605DF;
@@ -157,25 +177,46 @@ footer {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
-  h1 {
-    font-size: 36px;
+    h1 {
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    .hero-content {
+      padding: 40px 24px;
+      max-width: 100%;
+    }
+    .nav-bar {
+      flex-direction: row;
+      align-items: center;
+    }
+    #nav-toggle {
+      display: block;
+    }
+    #nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: relative;
+      padding: 20px 0 60px;
+      height: 100vh;
+    }
+    #nav-menu.open {
+      display: flex;
+    }
+    .nav-link {
+      margin: 8px 0;
+    }
+    #nav-menu .button-primary {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      margin-left: 0;
+    }
+    .button-secondary {
+      display: block;
+      margin: 12px 0 0;
+    }
   }
-  h2 {
-    font-size: 24px;
-  }
-  .hero-content {
-    padding: 40px 24px;
-    max-width: 100%;
-  }
-  .nav-bar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-link {
-    margin: 8px 0;
-  }
-  .button-secondary {
-    display: block;
-    margin: 12px 0 0;
-  }
-}
