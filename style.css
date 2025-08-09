@@ -286,7 +286,7 @@ main > section:nth-of-type(even) {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('assets/images/dataraiils-app-ui-preview.png');
+  background-image: url('assets/images/abstract-movement-bg.svg');
   background-size: cover;
   background-position: center;
   filter: blur(6px);
