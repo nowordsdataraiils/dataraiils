@@ -621,10 +621,10 @@ body.menu-open .persistent-cta {
   justify-content: center;
 }
 .hero h1 {
-  font-size: 60px;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 16px;
+  line-height: 1.3;
+  margin-bottom: 32px;
 }
 .hero .lead {
   font-size: 20px;
@@ -866,7 +866,7 @@ body.menu-open .persistent-cta {
       padding: 100px 0;
     }
     h1 {
-      font-size: 36px;
+      font-size: 48px;
     }
     .hero {
       grid-template-columns: 1fr;
@@ -882,7 +882,7 @@ body.menu-open .persistent-cta {
       align-items: center;
     }
     .hero h1 {
-      font-size: 36px;
+      font-size: 48px;
     }
     .hero .lead {
       font-size: 18px;
