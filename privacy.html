@@ -23,6 +23,8 @@
   </nav>
 </header>
 
+<a href="index.html#demo" class="button-primary persistent-cta">Get Demo</a>
+
 <main class="layout-grid">
   <section class="section">
     <h1>Privacy Policy</h1>
@@ -70,6 +72,7 @@
   const navBar = document.querySelector('.nav-bar');
   navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('open');
+    document.body.classList.toggle('menu-open');
   });
   window.addEventListener('scroll', () => {
     if (window.scrollY > 10) {
