@@ -67,7 +67,7 @@ ul, ol {
 }
 blockquote {
   font-style: italic;
-  color: var(--color-gray-500);
+  color: var(--color-ink);
   margin: 24px 0;
   padding-left: 20px;
   border-left: 3px solid var(--color-brand);
@@ -260,14 +260,14 @@ main > section:nth-of-type(even) {
 .launch-copy p {
   font-size: 18px;
   font-weight: 400;
-  color: var(--color-muted); /* Slate Fog */
+  color: var(--color-ink);
   line-height: 1.6;
 }
 
 .launch-benefits {
   font-size: 18px;
   font-weight: 400;
-  color: var(--color-muted); /* Slate Fog */
+  color: var(--color-ink);
   line-height: 1.6;
   padding-left: 1.2em;
   list-style-type: disc;
@@ -308,7 +308,7 @@ main > section:nth-of-type(even) {
 .quote-card .quote-attribution {
   font-size: 16px;
   font-weight: 400;
-  color: var(--color-muted);
+  color: var(--color-ink);
   margin-top: 8px;
 }
 
@@ -384,7 +384,7 @@ main > section:nth-of-type(even) {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  color: var(--color-gray-600);
+  color: var(--color-ink);
   margin-bottom: 48px;
   max-width: 600px;
   margin-left: auto;
@@ -404,7 +404,7 @@ main > section:nth-of-type(even) {
 }
 
 .three-steps .subtext {
-  color: var(--color-gray-600);
+  color: var(--color-ink);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -464,7 +464,7 @@ main > section:nth-of-type(even) {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: var(--color-gray-600);
+  color: var(--color-ink);
   max-width: 300px;
   margin: 0 auto;
 }
@@ -618,13 +618,13 @@ main > section:nth-of-type(even) {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--color-muted);
+  color: var(--color-ink);
   margin-bottom: 24px;
 }
 .hero-microproof {
   font-size: 16px;
   font-weight: 500;
-  color: var(--color-muted);
+  color: var(--color-ink);
   margin-top: 0;
 }
 .hero-cta {
@@ -841,7 +841,7 @@ main > section:nth-of-type(even) {
 .testimonial .client {
   font-size: 16px;
   font-weight: 400;
-  color: var(--color-muted);
+  color: var(--color-ink);
   text-align: left;
 }
 
