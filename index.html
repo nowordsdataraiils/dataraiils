@@ -336,8 +336,58 @@
 
   const navToggle = document.getElementById('nav-toggle');
   const navMenu = document.getElementById('nav-menu');
+  const navLinks = navMenu.querySelectorAll('.nav-link');
+
+  const focusableSelectors = 'a, button, [tabindex]:not([tabindex="-1"])';
+  let firstFocusable, lastFocusable;
+
+  const trapFocus = (e) => {
+    if (!navMenu.classList.contains('open')) return;
+    if (e.key === 'Escape') {
+      closeMenu();
+      return;
+    }
+    if (e.key !== 'Tab') return;
+    const isShift = e.shiftKey;
+    const active = document.activeElement;
+    if (!isShift && active === lastFocusable) {
+      e.preventDefault();
+      firstFocusable.focus();
+    } else if (isShift && active === firstFocusable) {
+      e.preventDefault();
+      lastFocusable.focus();
+    }
+  };
+
+  const openMenu = () => {
+    navMenu.classList.add('open');
+    document.body.classList.add('menu-open');
+    const focusables = navMenu.querySelectorAll(focusableSelectors);
+    firstFocusable = focusables[0];
+    lastFocusable = focusables[focusables.length - 1];
+    firstFocusable.focus();
+    document.addEventListener('keydown', trapFocus);
+    navToggle.setAttribute('aria-expanded', 'true');
+  };
+
+  const closeMenu = () => {
+    navMenu.classList.remove('open');
+    document.body.classList.remove('menu-open');
+    document.removeEventListener('keydown', trapFocus);
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.focus();
+  };
+
   navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
+    if (navMenu.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
   });
 
   const faqItems = document.querySelectorAll('.faq-item');
