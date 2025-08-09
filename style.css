@@ -592,13 +592,7 @@ main > section:nth-of-type(even) {
   width: 40%;
   height: 20%;
   transform: translateY(-50%);
-  background: repeating-linear-gradient(
-    to right,
-    rgba(150, 5, 223, 0.15) 0px,
-    rgba(150, 5, 223, 0.15) 2px,
-    transparent 2px,
-    transparent 12px
-  );
+  background: none;
   opacity: 0.2;
   z-index: 2;
   pointer-events: none;
