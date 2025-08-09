@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="../style.css" />
+  <title>Dataraiils Dashboard</title>
+  <style>
+    .app-header {
+      background: var(--color-brand);
+      color: var(--color-white);
+      padding: 1rem;
+      text-align: center;
+    }
+    .card {
+      background: var(--color-bg-light);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Dashboard</h1>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Welcome</h2>
+      <p>This is your mobile dashboard.</p>
+    </section>
+  </main>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
