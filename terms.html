@@ -67,8 +67,16 @@
 <script>
   const navToggle = document.getElementById('nav-toggle');
   const navMenu = document.getElementById('nav-menu');
+  const navBar = document.querySelector('.nav-bar');
   navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('open');
+  });
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      navBar.classList.add('scrolled');
+    } else {
+      navBar.classList.remove('scrolled');
+    }
   });
 </script>
 
