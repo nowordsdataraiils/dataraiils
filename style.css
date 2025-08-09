@@ -557,12 +557,18 @@ main > section:nth-of-type(even) {
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: max(100vh, 720px);
+  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
   overflow: hidden;
   color: var(--color-ink);
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 720px;
+  }
 }
 .hero-bg {
   position: absolute;
