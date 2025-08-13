@@ -116,6 +116,8 @@ a:not(.button-primary):hover {
   grid-column: 1 / -1;
 }
 .section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   padding: var(--section-spacing) 0;
   opacity: 0;
   transition: opacity 0.3s ease-out;
@@ -189,7 +191,7 @@ body.menu-open .persistent-cta {
 /* Section 1 - Pain */
 .pain-section {
   background-color: var(--color-bg-muted);
-  padding: var(--section-spacing) 24px;
+  padding: var(--section-spacing) 0;
 }
 .pain-wrapper {
   max-width: 600px;
@@ -213,7 +215,7 @@ body.menu-open .persistent-cta {
 /* Section 2 - Cost */
 .cost-section {
   background-color: var(--color-bg-light);
-  padding: var(--section-spacing) 24px;
+  padding: var(--section-spacing) 0;
 }
 .cost-wrapper {
   max-width: 720px;
@@ -411,7 +413,7 @@ body.menu-open .persistent-cta {
 
 .three-steps {
   text-align: center;
-  padding: var(--section-spacing) 24px;
+  padding: var(--section-spacing) 0;
 }
 
 .steps-grid {
@@ -825,7 +827,7 @@ body.menu-open .persistent-cta {
 /* Testimonials */
 .testimonials {
   background-color: #F7F7F7;
-  padding: 100px 24px;
+  padding: 100px 0;
   text-align: center;
 }
 
