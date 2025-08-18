@@ -616,8 +616,8 @@ body.menu-open .persistent-cta {
   grid-column: 1 / span 6;
   position: relative;
   z-index: 3;
-  max-width: 580px;
-  padding-left: 5vw;
+  max-width: 600px;
+  padding: 120px 60px 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -878,7 +878,7 @@ body.menu-open .persistent-cta {
     }
     .hero-content {
       grid-column: 1;
-      padding: 40px 10vw;
+      padding: 80px 10vw 160px;
       max-width: 100%;
       text-align: center;
       align-items: center;
